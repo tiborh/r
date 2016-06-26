@@ -1,0 +1,1953 @@
+ORNL/CDIAC-107
+NDP-061A
+                                
+EFFECTS OF CO2 AND NITROGEN FERTILIZATION ON GROWTH
+AND NUTRIENT CONTENT OF JUVENILE PONDEROSA PINE
+                                
+Contributed by
+                             
+Dale W. Johnson (1,2), J. Timothy Ball (1), and Roger F. Walker (2)
+                                
+	(1)   Biological Sciences Center
+	      Desert Research Institute
+              P.O. Box 60220
+	      Reno, NV 89506
+                                
+	(2)   Environmental and Resource Sciences
+	      College of Agriculture
+	      University of Nevada
+	      Reno, NV 89512
+                                
+                                
+Prepared by Robert M. Cushman
+Carbon Dioxide Information Analysis Center
+Environmental Sciences Division
+Publication No. 4754
+Date Published: March 1998
+                                
+Prepared for the
+Environmental Sciences Division
+Office of Biological and Environmental Research
+Budget Activity Number KP 12 04 01 0
+                                
+Prepared by the
+Carbon Dioxide Information Analysis Center
+OAK RIDGE NATIONAL LABORATORY
+Oak Ridge, Tennessee 37831-6335
+managed by
+LOCKHEED MARTIN ENERGY RESEARCH CORP.
+for the
+U.S. DEPARTMENT OF ENERGY
+under contract DE-AC05-96OR22464                            
+
+
+CONTENTS
+
+	LIST OF TABLES
+	ABSTRACT
+	PART 1: INFORMATION ABOUT THE DATA PACKAGE
+	   1. NAME OF THE NUMERIC DATA PACKAGE
+	   2. PRINCIPAL INVESTIGATORS
+	   3. KEYWORDS
+	   4. BACKGROUND INFORMATION
+	   5. EXPERIMENTAL SETUP AND METHODS
+	   6. APPLICATIONS OF THE DATA
+	   7. DATA LIMITATIONS AND RESTRICTIONS
+	   8. REFERENCES
+	   9. QUALITY-ASSURANCE CHECKS AND DATA-PROCESSING ACTIVITIES
+	      PERFORMED BY CDIAC
+	   10. HOW TO OBTAIN THE DATA AND DOCUMENTATION
+	PART 2: CONTENT AND FORMAT OF DATA FILES
+	   11. LISTING OF FILES PROVIDED
+	   12. DESCRIPTION OF THE DOCUMENTATION FILE
+	   13. DESCRIPTION OF THE DATA FILES
+	   14. LISTING OF THE FORTRAN DATA RETRIEVAL PROGRAMS
+	   15. LISTING OF THE SAS DATA RETRIEVAL PROGRAMS
+	   16. PARTIAL LISTINGS OF THE FLAT ASCII DATA FILES
+
+
+LIST OF TABLES
+
+	1. List and description of the digital files
+	2. Contents of regr92.dat (File 2)
+	3. Contents of regr93.dat (File 3)
+	4. Contents of trees91.dat (File 4)
+	5. Contents of trees92.dat (File 5)
+	6. Contents of trees93.dat (File 6)
+
+
+ABSTRACT
+
+JOHNSON, D. W., J. T. BALL, AND R. F. WALKER. 1998. Effects of
+CO2 and Nitrogen Fertilization on Growth and Nutrient
+Content of Juvenile Ponderosa Pine. ORNL/CDIAC-107, NDP-061A,
+Carbon Dioxide Information Analysis Center, Oak Ridge National
+Laboratory, U.S. Department of Energy, Oak Ridge, Tennessee. 
+doi: 10.3334/CDIAC/vrc.ndp061
+
+This data set presents measured values of plant diameter and
+height, biomass of plant components, and nutrient (carbon,
+nitrogen, phosphorus, sulfur, potassium, calcium, magnesium,
+boron, copper, iron, manganese, and zinc) concentrations from a
+study of the effects of carbon dioxide and nitrogen fertilization
+on ponderosa pine (Pinus ponderosa Dougl. ex Laws.) conducted in
+open-top chambers in Placerville, California, from 1991 through
+1996. This data set contains values from 1991 through 1993.
+
+
+PART 1: INFORMATION ABOUT THE DATA PACKAGE
+
+1. NAME OF THE NUMERIC DATA PACKAGE
+                                
+EFFECTS OF CO2 AND NITROGEN FERTILIZATION ON GROWTH
+AND NUTRIENT CONTENT OF JUVENILE PONDEROSA PINE
+                                
+                                
+2. PRINCIPAL INVESTIGATORS
+                                
+Dale W. Johnson (1,2), J. Timothy Ball (1), and Roger F. Walker (2)
+
+	(1)	Biological Sciences Center
+		Desert Research Institute
+		P.O. Box 60220
+		Reno, NV 89506
+
+	(2)	Environmental and Resource Sciences
+		College of Agriculture
+		University of Nevada
+		Reno, NV 89512
+
+
+3. KEYWORDS
+                                
+Boron, calcium, carbon, carbon dioxide fertilization, copper, growth,
+iron, magnesium, manganese, nitrogen, nitrogen fertilization, nutrients,
+phosphorus, ponderosa pine, potassium, sulfur, zinc
+                                
+                                
+4. BACKGROUND INFORMATION
+                                
+This data set presents measured values of plant diameter and height, biomass
+of plant components, and nutrients in vegetation from a study of the
+effects of carbon dioxide and nitrogen fertilization on ponderosa
+pine (Pinus ponderosa Dougl. ex. Laws.) conducted in open-top
+chambers in Placerville, California, from 1991 through 1996. This
+data set contains values from 1991 through 1993. Further
+background for the study, as well as the results and conclusions
+from the study, may be found in Johnson et al. (1997), which is
+the primary reference for this data set. Users who wish to use
+these data in specific model exercises or research exercises
+should first refer to Johnson et al. (1997).
+
+
+5. EXPERIMENTAL SETUP AND METHODS
+                                
+Detailed information concerning the site and experimental setup,
+treatments, and sampling and analytical methods is given in
+Johnson et al. (1997) and Walker et al. (1997); the methods are
+summarized below.
+
+Twenty-four hexagonal open-top chambers, 3.6 m in diameter, were
+established in February  April 1991 at the Institute of Forest
+Genetics in Placerville, California, on a soil of Aiken clay
+loam, an andesite-derived Xeric Haplohumult. The studied pines
+were grown from seeds (21 locations per chamber) planted in May
+1991.
+
+Treatment began in May 1991. There were three treatment levels of
+nitrogen (N) fertilization (0, 10, and 20 g N per square meter
+per year applied as ammonium sulfate) and four CO2 treatments
+(ambient, no chamber; ambient, chambered; 525 microliters CO2 per
+liter air; and 700 microliters CO2 per liter air). All
+combinations of the treatments were studied, except for the
+combination of 10 g N per square meter per year and 525 microliters
+CO2 per liter air. Each of the unchambered treatments was replicated
+twice, each of the chambered treatments thrice. All plots were
+watered identically.
+
+Three trees from each chamber were harvested in October 1991,
+1992, and 1993 (including complete root systems for all three
+harvested trees per chamber in 1991 and 1992 and for one tree per
+chamber in 1993). Seedlings were dried, weighed by component
+(foliage, branch, stem, and roots; in 1991 and 1992, branches were
+sufficiently trivial that their weights were included with those
+of stems), and analyzed as follows:
+
+N: analyzed on a Perkin-Elmer 2400 CHN Analyzer
+
+Other nutrients (P, S, K, Ca, Mg, B, Cu, Fe, Mn, Zn): dry-ashed at
+550 degrees Celsius for 4 h, dissolved in 5% (v/v) nitric acid, and
+analyzed by inductively-coupled plasma (ICP) emission spectroscopy
+
+In 1992, no elemental analyses were conducted for branches in the
+unchambered treatment.
+
+Tree biomass for needles, stems (including branches), and roots
+was measured directly in 1991 for the trees analyzed for nutrient
+concentration. For 1992 and 1993, the following regression was
+established (based on measured diameters, heights, and biomass),
+relating biomass in grams for each component (Comp) to diameter
+(d), measured in mm at 10 cm, and height (h), measured in cm:
+
+     ln(Comp) = a + (b)ln(d2h), where a and b are regression
+constants given in the following table:
+_____________________________________________________________
+
+Component	a		b		r2
+_____________________________________________________________
+
+                          1992 Harvest
+
+Needles		-2.9797		0.65540		0.692
+
+Stems +
+branches	-4.8812		0.86967		0.724
+
+Roots		-4.9412		0.84429		0.615
+
+
+                          1993 Harvest
+
+Needles		-6.2504		1.0395		0.729
+
+Branches       -12.173		1.4685		0.631
+
+Stems		-9.4724		1.3200		0.819
+
+Roots		-6.7686		1.038		0.868
+______________________________________________________________
+
+
+Measurements in 1993 were based on one whole tree, plus two
+additional tree tops, harvested per chamber. The user should note
+that two sets of height and diameter data are reported for 1993
+(in association with the measured nutrient concentration data,
+and in association with the biomass data used to generate the regressions); the height
+and diameter measurements used to generate the regressions were
+taken a short time after the measurements at harvest.
+
+In the data files and this documentation, the terms "leaf" and
+"needle" are equivalents, as are "stem" and "trunk."
+
+
+6. APPLICATIONS OF THE DATA
+
+These data may be used to study the effect of elevated levels of atmospheric carbon dioxide, in
+combination with various levels of nitrogen fertilization, on the growth and nutrient content of
+ponderosa pine (Pinus ponderosa Dougl. ex Laws.), an important timber species of western
+North America. Johnson et al. (1997) used the data documented in this numeric data package to
+evaluate two hypotheses: (1) that elevated CO2 would increase growth and yield of biomass per
+unit uptake of N even if N is limiting, and (2) that elevated CO2 would increase biomass yield per 
+unit uptake of other, nonlimiting nutrients only by growth dilution.
+
+For several years, research has been conducted on the effects of elevated carbon dioxide, alone or in 
+combination with other factors such as the availability of water and nutrients, on many different wild 
+and cultivated plant species. There has been a trend towards more realistic conditions: from flowerpot 
+studies in growth chambers to open-top chamber studies (the experiment whose data are documented in 
+this numeric data package is one such study), in which the plants are exposed to the atmosphere and in 
+which the roots are not necessarily confined to pots. A further step towards realism was taken in the 
+1990s with the development of the FACE (Free Air CO2 Enrichment) studies (Ellsworth et al. 1995), in 
+which plants are grown without confinement in chambers and carbon dioxide is typically released around 
+the perimeter of the circular study area (with attention paid to wind speed and direction) in sufficient 
+quantity to maintain desired concentrations of carbon dioxide within the study area.
+
+An early review of the literature on the effects of elevated carbon dioxide on vegetation may be
+found in Strain and Cure (1985), while a recent review may be found in Amthor (1995). Two
+bibliographies that include much of the pertinent literature are Strain and Cure (1986) and Strain and 
+Cure (1994). Curtis (1997) is an on-line data base that summarizes many studies of the effects of 
+elevated carbon dioxide on woody vegetation.
+
+
+7. DATA LIMITATIONS AND RESTRICTIONS
+
+Users should appreciate that the study whose data are documented in this numeric data package
+suffers from the inherent limitation common to all open-top chambers studies: the plants are
+confined in chambers and therefore are not growing in completely natural conditions. For a
+critique of open-top chamber studies, and descriptions of other experimental approaches for
+measuring the responses of plants to elevated carbon dioxide, the user is referred to Allen 
+et al. (1992) and Ceulemans and Mousseau (1994). 
+
+Johnson et al. (1997) have noted that observed declines in soil carbon and nitrogen during the
+study probably resulted from plowing that occurred before planting, rather than from the
+experimental treatment. It is possible that some observed changes in plant growth and nutrient
+content may also have been responses to plowing, rather than to the experimental treatment. That
+is, preplanting plowing may be considered a potential artifact of the experiment.
+
+Users are cautioned against using sample tree averages to estimate treatment effects because 
+that would yield a biased result; that is, the sample trees did not reflect the average dimensions 
+of all trees in the chambers. An unbiased estimate of biomass and nutrient content can be 
+obtained by applying regressions to the diameter and height measurements of all trees in the chambers.
+
+
+8. REFERENCES
+                                
+Allen, L.H., Jr., B.G. Drake, H.H. Rogers, and J.H. Shinn. 1992. Field techniques for exposure of plants 
+and ecosystems to elevated CO2 and other trace gases. Critical Reviews in Plant Sciences 11:85-119.
+
+Amthor, J.S. 1995. Terrestrial higher-plant response to increasing atmospheric [CO2] in relation
+to the global carbon cycle. Global Change Biology 1:243-274.
+
+Ceulemans, R., and M. Mousseau. 1994. Effects of elevated atmospheric CO2 on woody plants
+(Tansley Review No. 71). New Phytologist 127:425-446.
+
+Curtis, P.S. 1997. A Comprehensive Database of Woody Vegetation Responses to Elevated
+Atmospheric CO2. [http://cdiac.esd.ornl.gov/epubs/db/db1018/db1018.html]. Carbon Dioxide
+Information Analysis Center, Oak Ridge National Laboratory, U.S. Department of Energy.
+
+Ellsworth, D.S., R. Orem, C. Huang, N. Phillips, and G.R. Hendrey. 1995. Leaf and canopy
+responses to elevated CO2 in a pine forest under free-air CO2 enrichment. Oecologia
+104:139-146.
+
+Johnson, D.W., J.T. Ball, and R.F. Walker, 1997. Effects of CO2 and nitrogen fertilization on
+vegetation and soil nutrient content in juvenile ponderosa pine. Plant and Soil 190:29-40.
+
+Strain, B.R., and J.D. Cure (eds.). 1985. Direct effects of increasing carbon dioxide on
+vegetation. DOE/ER-0238. U.S. Department of Energy, Washington, D.C.
+
+Strain, B.R., and J.D. Cure. 1986. Direct effects of atmospheric CO2 enrichment on plants
+and ecosystems: A bibliography with abstracts. ORNL/CDIC-13. Carbon Dioxide Information
+Analysis Center, Oak Ridge National Laboratory, U.S. Department of Energy.
+
+Strain, B.R., and J.D. Cure. 1994. Direct effects of atmospheric CO2 enrichment on plants and
+ecosystems: An updated bibliographic data base. ORNL/CDIAC-70. Carbon Dioxide Information
+Analysis Center, Oak Ridge National Laboratory, U.S. Department of Energy.
+
+Walker, R.F., D.R. Geisinger, D.W. Johnson, and J.T. Ball, 1997. Elevated atmospheric CO2 and
+soil N fertility effects on growth, mycorrhizal colonization, and xylem water potential of
+juvenile ponderosa pine in a field soil. Plant and Soil 195:25-36.
+
+
+9. QUALITY-ASSURANCE CHECKS AND DATA-PROCESSING ACTIVITIES PERFORMED BY CDIAC
+                                
+An important part of the data-packaging process at the Carbon
+Dioxide Information Analysis Center (CDIAC) is the quality
+assurance (QA) of the data before their distribution. The QA
+process is an important component in the value-added concept of
+ensuring accurate, usable information. The complete QA of a data
+set can be a time-consuming process, since data received by CDIAC
+are rarely in condition for immediate distribution, regardless of
+source. The following summarizes the QA checks and data-processing
+performed on the data sets presented in this document:
+
+1. The EXCEL (registered trademark of the Microsoft Corporation,
+Redmond, Washington) spreadsheet files were provided by the
+principal investigators.
+
+2. Cell formulas contained in the spreadsheets received by CDIAC
+were checked for correctness using EXCEL and QUATTRO PRO
+(registered trademark of the Corel Corporation, Ottawa, Ontario,
+Canada).
+
+3. Values entered directly into the spreadsheets were verified
+wherever possible by values calculated from data already in the
+spreadsheets.
+
+4. The files were simplified and reduced to include only direct
+measurements (of diameter, height, biomass, and nutrient
+concentrations); estimated values (e.g., biomass calculated from
+regressions, nutrient content derived from estimated biomass and
+measured concentration) and statistics were removed.
+
+5. The files for the 1992 and 1993 data were compared with
+respect to carbon dioxide and nitrogen treatment levels, chamber
+label, and replicate number, to ensure correctness and
+consistency of nomenclature.
+
+6. Variables were renamed for internal consistency, with the new
+names ranging from one to six characters each.
+
+7. Spreadsheet files were reformatted into 1-2-3 (registered
+trademark of the Lotus Development Corporation, Cambridge,
+Massachusetts) *.wk1 spreadsheet files and converted into flat
+ASCII files, in which -9, -9.9, or -9.99 represent missing
+values.
+
+
+10. HOW TO OBTAIN THE DATA AND DOCUMENTATION
+                                
+These data may be used with spreadsheet software (e.g., 1-2-3,
+EXCEL, or QUATTRO PRO) or with other database management and
+statistical software. The spreadsheets in this data package were
+saved as both 1-2-3 *.wk1 spreadsheet files and *.dat flat ASCII
+files. The computerized data are available on Exabyte 8-mm tapes,
+QIC 1/4" tape cartridges, IBM DOS-compatible floppy diskettes
+(3.5" or 5.25"), and through CDIAC's World Wide Web site and
+anonymous File Transfer Protocol (FTP) area (addresses given
+below). Requests for magnetic media should include any specific
+instructions required by the user and/or the user's local
+computer system. Requests for this package should be addressed
+to:
+
+        Carbon Dioxide Information Analysis Center
+        Oak Ridge National Laboratory
+        Oak Ridge, TN 37831-6335
+        U.S.A.
+        
+        Telephone: 423-574-3645
+        Fax: 423-574-2232
+        Email: cdiac@ornl.gov
+        
+        FTP: cdiac.esd.ornl.gov
+        URL: http://cdiac.esd.ornl.gov
+        
+The data files may be acquired via Internet from CDIAC's
+anonymous FTP service as follows:
+
+     FTP to cdiac.esd.ornl.gov (128.219.24.36).
+     Enter "ftp" as the user id.
+     Enter your electronic mail address as the password (e.g.,
+     fred@zulu.org).
+     Change to the directory "pub/ndp061a" (i.e., use the command
+     "cd pub/ndp061a").
+     Set ftp to get ASCII files by using the ftp "ascii" command.
+     Retrieve the ASCII database documentation file by using the
+     ftp "get ndp061a.txt" command.
+     Retrieve the ASCII data files by using the ftp "mget *.dat"
+     command.
+     Retrieve the ASCII FORTRAN files by using the ftp "mget
+     *.for" command.
+     Retrieve the ASCII SAS (registered trademark of the SAS Institute, Inc., Cary,
+     North Carolina) files by using the ftp "mget *.sas" command.
+     Set ftp to get binary files by using the ftp "binary"
+     command.
+     Retrieve the binary spreadsheet files by using the ftp "mget
+     *.wk1" command.
+     Exit the system by using the ftp "quit" command.
+     Contact CDIAC by phone, fax, email, or letter to order a
+     hard copy of this documentation.
+
+
+PART 2: CONTENT AND FORMAT OF DATA FILES
+
+11. LISTING OF FILES PROVIDED
+
+The following table lists the files on the magnetic media
+distributed by CDIAC along with this documentation. These files
+are also available through CDIAC's anonymous FTP service
+(cdiac.esd.ornl.gov) and World Wide Web site
+(http://cdiac.esd.ornl.gov) via the Internet (see Sect. 10, How
+to Obtain the Data and Documentation).
+
+
+
+Table 1. List and description of the digital files
+______________________________________________________________________________
+
+File
+number          Name                  Description               File size (kB)
+______________________________________________________________________________
+
+  1          ndp061a.txt        ASCII descriptive                   90
+                                information file
+
+  2          regr92.dat         1992 height, diameter,               5
+                                and biomass data
+
+  3          regr93.dat         1993 height, diameter,               5 
+                                and biomass data 
+
+  4          trees91.dat        1991 biomass and                     9 
+                                nutrient data
+
+  5          trees92.dat        1992 height, diameter,              15
+                                and nutrient data
+
+  6          trees93.dat        1993 height, diameter,             262
+                                and nutrient data
+ 
+  7          regr92.wk1         spreadsheet file corresponding      14
+                                to gr92.dat (File 2)
+
+  8          regr93.wk1         spreadsheet file corresponding      16 
+                                to regr93.dat (File 3)
+
+  9          trees91.wk1        spreadsheet file corresponding      27 
+                                to trees91.dat (File 4)
+
+ 10          trees92.wk1        spreadsheet file corresponding      35
+                                to trees92.dat (File 5)
+
+ 11          trees93.wk1        spreadsheet file corresponding     400
+                                to trees93.dat (File 6)
+
+ 12          regr92.for         FORTRAN 77 data retrieval            1
+                                routine to read regr92.dat 
+                                (File 2)
+
+ 13          regr93.for         FORTRAN 77 data retrieval            1
+                                routine to read regr93.dat 
+                                (File 3)
+  
+ 14          trees91.for        FORTRAN 77 data retrieval            1
+                                routine to read trees91.dat
+                                (File 4)
+  
+ 15          trees92.for        FORTRAN 77 data retrieval            2
+                                routine to read trees92.dat 
+                                (File 5)
+  
+ 16          trees93.for        FORTRAN 77 data retrieval            3
+                                routine to read trees93.dat 
+                                (File 6)
+ 
+ 17          regr92.sas         SAS data retrieval routine           1
+                                to read regr92.dat (File 2)
+
+ 18          regr93.sas         SAS data retrieval routine           1
+                                read regr93.dat (File 3)
+
+ 19          trees91.sas        SAS data retrieval routine           1
+                                to read trees91.dat (File 4)
+
+ 20          trees92.sas        SAS data retrieval routine           1
+                                to read trees92.dat (File 5)
+
+ 21          trees93.sas        SAS data retrieval routine           2
+                                to read trees93.dat (File 6)
+
+______________________________________________________________________________
+
+
+
+
+12. DESCRIPTION OF THE DOCUMENTATION FILE
+
+ndp061a.txt (File 1)
+
+This file contains a detailed description of the data base (name
+of the numeric data package, principal investigators, keywords,
+background information, experimental setup and methods,
+applications of the data, data limitations and restrictions,
+references, QA checks and data-processing activities performed by
+CDIAC) and how to obtain the data and documentation. A
+description of the formats, units, and other pertinent
+information about each file associated with this database is
+included.
+
+
+13. DESCRIPTION OF THE DATA FILES
+
+DATA FORMAT AND UNITS
+
+The data contained in this NDP are available as both 1-2-3
+spreadsheet files and flat ASCII files. SAS and FORTRAN programs
+designed to read each ASCII data file are also provided.
+
+In all files, C (carbon dioxide treatment) is defined as follows:
+
+     1 = no chamber;
+     2 = ambient (350 microliters CO2 per liter air);
+     3 = 525 microliters CO2 per liter air;
+     4 = 700 microliters CO2 per liter air.
+
+N (nitrogen treatment) is defined as follows:
+
+     1 = unfertilized;
+     2 = 10 g N per square meter per year;
+     3 = 20 g N per square meter per year.
+
+Each variable label consists of up to six characters, where
+
+BM denotes biomass,
+BR denotes branch,
+CC denotes a concentration (mass per unit mass) of a nutrient in plant tissue,
+CD denotes candle (new shoots where needles have not come out yet),
+CHBR denotes open-top chamber identification label,
+CR denotes coarse root [the sum of medium root plus tap root (i.e., diameter >2 mm)],
+DIA denotes diameter,
+FO denotes foliage
+FR denotes fine root (diameter <2 mm),
+HT denotes height,
+LF denotes leaf (needle),
+LR denotes lateral root,
+MR denotes medium root (diameter from 2 mm to 1 cm),
+N1 denotes first-flush needle (the first flush of needles in a given year),
+N2 denotes second-flush needle (the second flush of needles in a given year),
+NO denotes old needle (needles that appeared before 1993),
+NS denotes senesced needle (brown needles that were about ready to fall off the tree),
+REP denotes seedling replicate identification label,
+RT denotes root,
+ST denotes stem (includes branches in 1991 and 1992),
+TB denotes trunk bottom (10 cm from the bottom of the trunk),
+TM denotes trunk middle (halfway up the trunk),
+TR denotes tap root,
+TT denotes trunk top (the middle of the top shoot),
+
+and where the standard chemical symbol (in all upper case) is used for elements. The general
+pattern for indicating nutrient concentrations (i.e., the final two letters are "CC") is that 
+the first two letters indicate the plant tissue, and the following one or two letters indicate 
+the nutrient; thus, "LFMNCC" represents the measured concentration of manganese in leaf tissue.
+
+
+FLAT ASCII DATA FILES
+
+The following tables describe the contents and formats of the five flat ASCII files that are
+distributed with this data package. Missing values are represented by -9.99, with two exceptions: 
+-9 represents missing values of REP in trees91.dat (File 4), and -9.9 represents missing values 
+of HT in regr93.dat (File 3). The data files in this package do not contain any negative values 
+other than the missing-value indicators. The following tables also indicate the column in the 
+corresponding spreadsheet files in which each variable is found. For trees92.dat (File 5), the 
+user should note that, for the sake of consistency of format, all data in columns >35 are 
+shown with an apparent precision of two digits to the right of the decimal (i.e., hundredths 
+of the specified unit); for trees93.dat (File 6), this applies to all data in columns >42. This 
+should not be construed as the true precision of measurement; for many variables the user will 
+observe only zeros to the right of the decimal (other than in the case of -9.99, the missing-value indicator).
+
+The user is strongly urged to pay careful attention to the variable widths specified in the 
+following tables and in the FORTRAN and SAS data retrieval programs provided with this package 
+(*.for and *.sas, respectively). In some cases (i.e., where values occupy all the allotted six 
+or seven spaces), adjacent values will run together, and there will be no space between adjacent 
+values. Therefore, importing the data into a program with space or tab delimiters would produce
+erroneous results. It is highly recommended that the *.wk1files provided with this data package
+be used for spreadsheet applications.
+
+
+
+Table 2. Contents of regr92.dat (File 2)
+
+___________________________________________________________________________________________
+
+Variable  Variable  Variable  Starting  Ending   Units   Spreadsheet    Definition     
+          type      width     column    column           column
+___________________________________________________________________________________________
+
+C        character    6        1         6                  A          CO2 treatment level
+
+N        character    6        7        12                  B          N treatment level
+
+CHBR     character    6       13        18                  C          Open-top chamber
+                                                                       identification label
+
+REP      numeric      6       19        24                  D          Seedling Replicate
+                                                                       identification label
+
+HT       numeric      6       25        30       cm         E          Seedling height
+
+DIA      numeric      6       31        36       mm         F          Seedling diameter
+
+LFBM     numeric      6       37        42       g          G          Leaf biomass
+
+STBM     numeric      6       43        48       g          H          Stem biomass
+
+CRBM     numeric      6       49        54       g          I          Coarse root
+                                                                       biomass
+
+FRBM     numeric      6       55        60       g          J          Fine root biomass
+___________________________________________________________________________________________
+
+
+
+
+Table 3. Contents of regr93.dat (File 3)
+
+_____________________________________________________________________________________
+ 
+                                                         Spread-
+          Variable   Variable  Starting  Ending          sheet     
+Variable  type       width     column    column   Units  column       Definition
+_____________________________________________________________________________________
+
+C         character     6         1         6              A      CO2 treatment
+                                                                  level
+
+N         character     6         7        12              B      N treatment  
+                                                                  level
+
+CHBR      character     6        13        18              C      Open-top chamber
+                                                                  identification
+                                                                  label
+
+REP       numeric       6        19        24              D      Seedling replicate
+                                                                  identification
+                                                                  label
+
+HT        numeric       6        25        30      cm      E      Seedling height
+
+DIA       numeric       6        31        36      mm      F      Seedling diameter
+ 
+LFBM      numeric       6        37        42      g       G      Leaf biomass
+
+RBM       numeric       6        43        48      g       H      Branch biomass
+
+STBM      numeric       6        49        54      g       I      Stem biomass
+
+RTBM      numeric       6        55        60      g       J      Root biomass
+_____________________________________________________________________________________
+
+
+
+
+Table 4. Contents of trees91.dat (File 4)
+_____________________________________________________________________________________
+
+                                                              Spread-
+           Variable    Variable   Starting   Ending           sheet  
+Variable   type        width      column     column   Units   column    Definition
+_____________________________________________________________________________________
+
+C          character     6           1         6                A     CO2 treatment
+                                                                      level
+
+N          character     6           7        12                B     N treatment 
+                                                                      level
+
+CHBR       character     6          13        18                C     Open-top 
+                                                                      chamber
+                                                                      identification
+                                                                      label
+
+REP        character     6          19        24                D     Seedling 
+                                                                      replicate
+                                                                      identification
+                                                                      label
+
+LFBM       numeric       6          25        30       g        E     Leaf biomass
+
+STBM       numeric       6          31        36       g        F     Stem biomass
+
+RTBM       numeric       6          37        42       g        G     Root biomass
+
+LFNCC      numeric       6          43        48       %        H     Leaf N
+                                                                      concentration
+
+STNCC      numeric       6          49        54       %        I     Stem N 
+                                                                      concentration
+
+RTNCC      numeric       6          55        60       %        J     Root N
+                                                                      concentration
+ 
+LFBCC      numeric       6          61        66       ppm      K     Leaf B 
+                                                                      concentration
+
+STBCC      numeric       6          67        72       ppm      L     Stem B
+                                                                      concentration
+ 
+RTBCC      numeric       6          73        78       ppm      M     Root B
+                                                                      concentration
+
+LFCACC     numeric       6          79        84       %        N     Leaf Ca
+                                                                      concentration
+
+STCACC     numeric       6          85        90       %        O     Stem Ca 
+                                                                      concentration
+
+RTCACC     numeric       6          91        96       %        P     Root Ca 
+                                                                      concentration
+
+LFKCC      numeric       6          97       102       %        Q     Leaf K 
+                                                                      concentration
+
+STKCC      numeric       6         103       108       %        R     Stem K 
+                                                                      concentration
+
+RTKCC      numeric       6         109       114       %        S     Root K 
+                                                                      concentration
+
+LFMGCC     numeric       6         115       120       %        T     Leaf Mg 
+                                                                      concentration
+
+STMGCC     numeric       6         121       126       %        U     Stem Mg 
+                                                                      concentration
+
+RTMGCC     numeric       6         127       132       %        V     Root Mg 
+                                                                      concentration
+
+LFPCC      numeric       6         133       138       %        W     Leaf P 
+                                                                      concentration
+
+STPCC      numeric       6         139       144       %        X     Stem P 
+                                                                      concentration
+
+RTPCC      numeric       6         145       150       %        Y     Root P 
+                                                                      concentration
+
+LFSCC      numeric       6         151       156       %        Z     Leaf S 
+                                                                      concentration
+
+STSCC      numeric       6         157       162       %        AA    Stem S 
+                                                                      concentration
+
+RTSCC      numeric       6         163       168       %        AB    Root S
+                                                                      concentration
+_____________________________________________________________________________________
+
+
+
+
+Table 5. Contents of trees92.dat (File 5)
+_____________________________________________________________________________________
+
+                                                           Spread-
+Variable   Variable   Variable  Starting   Ending          sheet    
+            type      width     column     column   Units  column     Definition
+_____________________________________________________________________________________
+
+C         character     7          1           7             A    CO2 treatment level
+
+N         character     7          8          14             B    N treatment level
+
+CHBR      character     7         15          21             C    Open-top chamber
+                                                                  identification
+                                                                  label
+
+REP       character     7         22          28             D    Seedling replicate
+                                                                  identification
+                                                                  label
+
+HT        numeric       7         29          35     cm      E    Seedling height
+
+DIA       numeric       7         36          42     mm      F    Seedling diameter
+
+LFNCC     numeric       7         43          49     %       G    Leaf N 
+                                                                  concentration
+
+BRNCC     numeric       7         50          56     %       H    Branch N 
+                                                                  concentration
+
+STNCC     numeric       7         57          63     %       I    Stem N
+                                                                  concentration
+
+TRNCC     numeric       7         64          70     %       J    Tap-root N
+                                                                  concentration
+
+MRNCC     numeric       7         71          77     %       K    Medium-root N
+                                                                  concentration
+
+FRNCC     numeric       7         78          84     %       L    Fine-root N
+                                                                  concentration
+
+LFCACC    numeric       7         85          91     %       M    Leaf Ca
+                                                                  concentration
+
+STCACC    numeric       7         79          98     %       N    Stem Ca
+                                                                  concentration
+
+BRCACC    numeric       7         99         105     %       O    Branch Ca
+                                                                  concentration
+
+FRCACC    numeric       7        106         112     %       P    Fine-root Ca
+                                                                  concentration
+
+MRCACC    numeric       7        113         119     %       Q    Medium-root Ca
+                                                                  concentration
+
+TRCACC    numeric       7        120         126     %       R    Tap-root Ca
+                                                                  concentration
+
+LFMGCC    numeric       7        127         133     %       S    Leaf Mg
+                                                                  concentration
+
+STMGCC    numeric       7        134         140     %       T    Stem Mg
+                                                                  concentration
+
+BRMGCC    numeric       7        141         147     %       U    Branch Mg
+                                                                  concentration
+
+FRMGCC    numeric       7        148         154     %       V    Fine-root Mg
+                                                                  concentration
+
+MRMGCC    numeric       7        155         161     %       W    Medium-root Mg
+                                                                  concentration
+
+TRMGCC    numeric       7        162         168     %       X    Tap-root Mg
+                                                                  concentration
+
+LFSCC     numeric       7        169         175     %       Y    Leaf S
+                                                                  concentration
+
+STSCC     numeric       7        176         182     %       Z    Stem S
+                                                                  concentration
+
+BRSCC     numeric       7        183         189     %       AA   Branch S
+                                                                  concentration
+
+FRSCC     numeric       7        190         196     %       AB   Fine-root S
+                                                                  concentration
+
+MRSCC     numeric       7        197         203     %       AC   Medium-root S
+                                                                  concentration
+
+TRSCC     numeric       7        204         210     %       AD   Tap-root S
+                                                                  concentration
+
+LFCUCC    numeric       7        211         217     ppm     AE   Leaf Cu
+                                                                  concentration
+
+STCUCC    numeric       7        218         224     ppm     AF   Stem Cu
+                                                                  concentration
+
+BRCUCC    numeric       7        225         231     ppm     AG   Branch Cu
+                                                                  concentration
+
+FRCUCC    numeric       7        232         238     ppm     AH   Fine-root Cu
+                                                                  concentration
+
+MRCUCC    numeric       7        239         245     ppm     AI   Medium-root Cu
+                                                                  concentration
+
+TRCUCC    numeric       7        246         252     ppm     AJ   Tap-root Cu
+                                                                  concentration
+
+LFMNCC    numeric       7        253         259     ppm     AK   Leaf Mn
+                                                                  concentration
+
+STMNCC    numeric       7        260         266     ppm     AL   Stem Mn
+                                                                  concentration
+
+BRMNCC    numeric       7        267         273     ppm     AM   Branch Mn
+                                                                  concentration
+
+FRMNCC    numeric       7        274         280     ppm     AN   Fine-root Mn
+                                                                  concentration
+
+MRMNCC    numeric       7        281         287     ppm     AO   Medium root Mn
+                                                                  concentration
+
+TRMNCC    numeric       7        288         294     ppm     AP   Tap-root Mn
+                                                                  concentration
+
+LFZNCC    numeric       7        295         301     ppm     AQ   Leaf Zn
+                                                                  concentration
+
+STZNCC    numeric       7        302         308     ppm     AR   Stem Zn
+                                                                  concentration
+
+BRZNCC    numeric       7        309         315     ppm     AS   Branch Zn
+                                                                  concentration
+
+FRZNCC    numeric       7        316         322     ppm     AT   Fine-root Zn
+                                                                  concentration
+
+MRZNCC    numeric       7        323         329     ppm     AU   Medium-root Zn
+                                                                  concentration
+
+TRZNCC    numeric       7        330         336     ppm     AV   Tap-root Zn
+                                                                  concentration
+
+LFKCC     numeric       7        337         343     %       AW   Leaf K
+                                                                  concentration
+
+STKCC     numeric       7        344         350     %       AX   Stem K
+                                                                  concentration
+
+BRKCC     numeric       7        351         357     %       AY   Branch K
+                                                                  concentration
+
+FRKCC     numeric       7        358         364     %       AZ   Fine-root K
+                                                                  concentration
+
+MRKCC     numeric       7        365         371     %       BA   Medium-root K
+                                                                  concentration
+
+TRKCC     numeric       7        372         378     %       BB   Tap-root K
+                                                                  concentration
+
+LFPCC     numeric       7        379         385     %       BC   Leaf P
+                                                                  concentration
+
+STPCC     numeric       7        386         392     %       BD   Stem P
+                                                                  concentration
+
+BRPCC     numeric       7        393         399     %       BE   Branch P
+                                                                  concentration
+
+FRPCC     numeric       7        400         406     %       BF   Fine-root P
+                                                                  concentration
+
+MRPCC     numeric       7        407         413     %       BG   Medium-root P
+                                                                  concentration
+
+TRPCC     numeric       7        414         420     %       BH   Tap-root P
+                                                                  concentration
+
+LFBCC     numeric       7        421         427     ppm     BI   Leaf B
+                                                                  concentration
+
+STBCC     numeric       7        428         434     ppm     BJ   Stem B
+                                                                  concentration
+
+BRBCC     numeric       7        435         441     ppm     BK   Branch B
+                                                                  concentration
+
+FRBCC     numeric       7        442         448     ppm     BL   Fine-root B
+                                                                  concentration
+
+MRBCC     numeric       7        449         455     ppm     BM   Medium root B
+                                                                  concentration
+
+TRBCC     numeric       7        456         462     ppm     BN   Tap-root B
+                                                                   concentration
+
+LFFECC    numeric       7        463         469     ppm     BO   Leaf Fe
+                                                                  concentration
+
+STFECC    numeric       7        470         476     ppm     BP   Stem Fe
+                                                                  concentration
+
+BRFECC    numeric       7        477         483     ppm     BQ   Branch Fe
+                                                                  concentration
+
+FRFECC    numeric       7        484         490     ppm     BR   Fine-root Fe
+                                                                  concentration
+
+MRFECC    numeric       7        491         497     ppm     BS   Medium-root Fe
+                                                                  concentration
+
+TRFECC    numeric       7        498         504     ppm     BT   Tap-root Fe
+                                                                  concentration
+_____________________________________________________________________________________
+
+
+
+
+Table 6. Contents of trees93.dat (File 6)
+_____________________________________________________________________________________
+
+                                                          Spread-
+Variable   Variable   Variable  Starting  Ending          sheet	
+           type       width     column    column   Units  column      Definition
+_____________________________________________________________________________________
+
+C          character     7          1        7              A    CO2 treatment level
+
+N          character     7          8       14              B    N treatment level
+
+CHBR       character     7         15       21              C    Open-top chamber
+                                                                 identification
+                                                                 label
+
+REP        character     7         22       28              D    Seedling replicate
+                                                                 identification 
+                                                                 label
+
+HT         numeric       7         29       35      cm      E    Seedling height
+
+DIA        numeric       7         36       42      mm      F    Seedling diameter
+
+N1CCC      numeric       7         43       49      %       G    First-flush needle
+                                                                 C concentration
+
+N1NCC      numeric       7         50       56      %       H    First-flush needle
+                                                                 N concentration
+
+N2CCC      numeric       7         57       63      %       I    Second-flush needle
+                                                                 C concentration
+
+N2NCC      numeric       7         64       70      %       J    Second-flush needle
+                                                                 N concentration
+
+CDCCC      numeric       7         71       77      %       K    Candle C 
+                                                                 concentration
+
+CDNCC      numeric       7         78       84      %       L    Candle N 
+                                                                 concentration
+
+NOCCC      numeric       7         85       91      %       M    Old-needle C
+                                                                 concentration
+
+NONCC      numeric       7         92       98      %       N    Old-needle N
+                                                                 concentration
+
+NSCCC      numeric       7         99      105      %       O    Senesced-needle
+                                                                 C concentration
+
+NSNCC      numeric       7        106      112      %       P    Senesced-needle
+                                                                 N concentration
+
+BRCCC      numeric       7        113      119      %       Q    Branch C 
+                                                                 concentration
+
+BRNCC      numeric       7        120      126      %       R    Branch N 
+                                                                 concentration
+
+FRCCC      numeric       7        127      133      %       S    Fine-root C
+                                                                 concentration
+
+FRNCC      numeric       7        134      140      %       T    Fine-root N
+                                                                 concentration
+
+TRCCC      numeric       7        141      147      %       U    Tap-root C 
+                                                                 concentration
+
+TRNCC      numeric       7        148      154      %       V    Tap-root N 
+                                                                 concentration
+
+LRCCC      numeric       7        155      161      %       W    Lateral-root C
+                                                                 concentration
+
+LRNCC      numeric       7        162      168      %       X    Lateral-root N
+                                                                 concentration
+
+TTCCC      numeric       7        169      175      %       Y    Trunk-top C
+                                                                 concentration
+
+TTNCC      numeric       7        176      182      %       Z    Trunk-top N
+                                                                 concentration
+
+TMCCC      numeric       7        183      189      %       AA   Trunk-middle C
+                                                                 concentration
+
+TMNCC      numeric       7        190      196      %       AB   Trunk-middle N
+                                                                 concentration
+
+TBCCC      numeric       7        197      203      %       AC   Trunk-bottom C
+                                                                 concentration
+
+TBNCC      numeric       7        204      210      %       AD   Trunk-bottom N
+                                                                 concentration
+
+NOPCC      numeric       7        211      217      %       AE   Old-needle P
+                                                                 concentration
+
+NOKCC      numeric       7        218      224      %       AF   Old-needle K
+                                                                 concentration
+
+NOSCC      numeric       7        225      231      %       AG   Old-needle S
+                                                                 concentration
+
+NOCACC     numeric       7        232      238      %       AH   Old-needle Ca
+                                                                 concentration
+
+NOMGCC     numeric       7        239      245      %       AI   Old-needle Mg
+                                                                 concentration
+
+NOMNCC     numeric       7        246      252      ppm     AJ   Old-needle Mn
+                                                                 concentration
+
+NOFECC     numeric       7        253      259      ppm     AK   Old-needle Fe
+                                                                 concentration
+
+NOCUCC     numeric       7        260      266      ppm     AL   Old-needle Cu
+                                                                 concentration
+
+NOBCC      numeric       7        267      273      ppm     AM   Old-needle B
+                                                                 concentration
+
+NOZNCC     numeric       7        274      280      ppm     AN   Old-needle Zn
+                                                                 concentration
+
+TRPCC      numeric       7        281      287      %       AO   Tap-root P 
+                                                                 concentration
+
+TRKCC      numeric       7        288      294      %       AP   Tap-root K 
+                                                                 concentration
+
+TRSCC      numeric       7        295      301      %       AQ   Tap-root S 
+                                                                 concentration
+
+TRCACC     numeric       7        302      308      %       AR   Tap-root Ca
+                                                                 concentration
+
+TRMGCC     numeric       7        309      315      %       AS   Tap-root Mg
+                                                                 concentration
+
+TRMNCC     numeric       7        316      322      ppm     AT   Tap-root Mn
+                                                                 concentration
+
+TRFECC     numeric       7        323      329      ppm     AU   Tap-root Fe
+                                                                 concentration
+
+TRCUCC     numeric       7        330      336      ppm     AV   Tap-root Cu
+                                                                 concentration
+
+TRBCC      numeric       7        337      343      ppm     AW   Tap-root B 
+                                                                 concentration
+
+TRZNCC     numeric       7        344      350      ppm     AX   Tap-root Zn
+                                                                 concentration
+
+LRPCC      numeric       7        351      357      %       AY   Lateral-root P
+                                                                 concentration
+
+LRKCC      numeric       7        358      364      %       AZ   Lateral-root K
+                                                                 concentration
+
+LRSCC      numeric       7        365      371      %       BA   Lateral-root S
+                                                                 concentration
+
+LRCACC     numeric       7        372      378      %       BB   Lateral-root Ca
+                                                                 concentration
+
+LRMGCC     numeric       7        379      385      %       BC   Lateral-root Mg
+                                                                 concentration
+
+LRMNCC     numeric       7        386      392      ppm     BD   Lateral-root Mn
+                                                                 concentration
+
+LRFECC     numeric       7        393      399      ppm     BE   Lateral-root Fe
+                                                                 concentration
+
+LRCUCC     numeric       7        400      406      ppm     BF   Lateral-root Cu
+                                                                 concentration
+
+LRBCC      numeric       7        407      413      ppm     BG   Lateral-root B
+                                                                 concentration
+
+LRZNCC     numeric       7        414      420      ppm     BH   Lateral-root Zn
+                                                                 concentration
+
+FRPCC      numeric       7        421      427      %       BI   Fine-root P
+                                                                 concentration
+
+FRKCC      numeric       7        428      434      %       BJ   Fine-root K
+                                                                 concentration
+
+FRSCC      numeric       7        435      441      %       BK   Fine-root S 
+                                                                 concentration
+
+FRCACC     numeric       7        442      448      %       BL   Fine-root Ca
+                                                                 concentration
+
+FRMGCC     numeric       7        449      455      %       BM   Fine-root Mg
+                                                                 concentration
+
+FRMNCC     numeric       7        456      462      ppm     BN   Fine-root Mn
+                                                                 concentration
+
+FRFECC     numeric       7        463      469      ppm     BO   Fine-root Fe
+                                                                 concentration
+
+FRCUCC     numeric       7        470      476      ppm     BP   Fine-root Cu
+                                                                 concentration
+
+FRBCC      numeric       7        477      483      ppm     BQ   Fine-root B
+                                                                 concentration
+
+FRZNCC     numeric       7        484      490      ppm     BR   Fine-root Zn
+                                                                 concentration
+
+BRPCC      numeric       7        491      497      %       BS   Branch P
+                                                                 concentration
+
+BRKCC      numeric       7        498      504      %       BT   Branch K 
+                                                                 ncentration
+
+BRSCC      numeric       7        505      511      %       BU   Branch S 
+                                                                 concentration
+
+BRCACC     numeric       7        512      518      %       BV   Branch Ca 
+                                                                 concentration
+
+BRMGCC     numeric       7        519      525      %       BW   Branch Mg 
+                                                                 concentration
+
+BRMNCC     numeric       7        526      532      ppm     BX   Branch Mn 
+                                                                 concentration
+
+BRFECC     numeric       7        533      539      ppm     BY   Branch Fe 
+                                                                 concentration
+
+BRCUCC     numeric       7        540      546      ppm     BZ   Branch Cu 
+                                                                 concentration
+
+BRBCC      numeric       7        547      553      ppm     CA   Branch B
+                                                                 concentration
+
+BRZNCC     numeric       7        554      560      ppm     CB   Branch Zn 
+                                                                 concentration
+
+NSPCC      numeric       7        561      567      %       CC   Senesced-needle P
+                                                                 concentration
+
+NSKCC      numeric       7        568      574      %       CD   Senesced-needle K
+                                                                 concentration
+
+NSSCC      numeric       7        575      581      %       CE   Senesced-needle S
+                                                                 concentration
+
+NSCACC     numeric       7        582      588      %       CF   Senesced-needle Ca
+                                                                 concentration
+
+NSMGCC     numeric       7        589      595      %       CG   Senesced-needle Mg
+                                                                 concentration
+
+NSMNCC     numeric       7        596      602      ppm     CH   Senesced-needle Mn
+                                                                 concentration
+
+NSFECC     numeric       7        603      609      ppm     CI   Senesced-needle Fe
+                                                                 concentration
+
+NSCUCC     numeric       7        610      616      ppm     CJ   Senesced-needle Cu
+                                                                 concentration
+
+NSBCC      numeric       7        617      623      ppm     CK   Senesced-needle B
+                                                                 concentration
+
+NSZNCC     numeric       7        624      630      ppm     CL   Senesced-needle Zn
+                                                                 concentration
+
+TTPCC      numeric       7        631      637      %       CM   runk-top P
+                                                                 concentration
+
+TTKCC      numeric       7        638      644      %       CN   Trunk-top K
+                                                                 concentration
+
+TTSCC      numeric       7        645      651      %       CO   Trunk-top S
+                                                                 concentration
+
+TTCACC     numeric       7        652      658      %       CP   Trunk-top Ca
+                                                                 concentration
+
+TTMGCC     numeric       7        659      665      %       CQ   Trunk-top Mg
+                                                                 concentration
+
+TTMNCC     numeric       7        666      672      ppm     CR   Trunk-top Mn
+                                                                 concentration
+
+TTFECC     numeric       7        673      679      ppm     CS   Trunk-top Fe
+                                                                 concentration
+
+TTCUCC     numeric       7        680      686      ppm     CT   Trunk-top Cu
+                                                                 concentration
+
+TTBCC      numeric       7        687      693      ppm     CU   Trunk-top B
+                                                                 concentration
+
+TTZNCC     numeric       7        694      700      ppm     CV   Trunk-top Zn
+                                                                 concentration
+
+TMPCC      numeric       7        701      707      %       CW   Trunk-middle P
+                                                                 concentration
+
+TMKCC      numeric       7        708      714      %       CX   Trunk-middle K
+                                                                 concentration
+
+TMSCC      numeric       7        715      721      %       CY   Trunk-middle S
+                                                                 concentration
+
+TMCACC     numeric       7        722      728      %       CZ   Trunk-middle Ca
+                                                                 concentration
+
+TMMGCC     numeric       7        729      735      %       DA   Trunk-middle Mg
+                                                                 concentration
+
+TMMNCC     numeric       7        736      742      ppm     DB   Trunk-middle Mn
+                                                                 concentration
+
+TMFECC     numeric       7        743      749      ppm     DC   Trunk-middle Fe
+                                                                 concentration
+
+TMCUCC     numeric       7        750      756      ppm     DD   Trunk-middle Cu
+                                                                 concentration
+
+TMBCC      numeric       7        757      763      ppm     DE   Trunk-middle B
+                                                                 concentration
+
+TMZNCC     numeric       7        764      770      ppm     DF   Trunk-middle Zn
+                                                                 concentration
+
+TBPCC      numeric       7        771      777      %       DG   Trunk-bottom P
+                                                                 concentration
+
+TBKCC      numeric       7        778      784      %       DH   Trunk-bottom K
+                                                                 concentration
+
+TBSCC      numeric       7        785      791      %       DI   Trunk-bottom S
+                                                                 concentration
+
+TBCACC     numeric       7        792      798      %       DJ   Trunk-bottom Ca
+                                                                 concentration
+
+TBMGCC     numeric       7        799      805      %       DK   Trunk-bottom Mg
+                                                                 concentration
+
+TBMNCC     numeric       7        806      812      ppm     DL   Trunk-bottom Mn
+                                                                 concentration
+
+TBFECC     numeric       7        813      819      ppm     DM   Trunk-bottom Fe
+                                                                 concentration
+
+TBCUCC     numeric       7        820      826      ppm     DN   Trunk-bottom Cu
+                                                                 concentration
+
+TBBCC      numeric       7        827      833      ppm     DO   Trunk-bottom B
+                                                                 concentration
+
+TBZNCC     numeric       7        834      840      ppm     DP   Trunk-bottom Zn
+                                                                 concentration
+
+N1PCC      numeric       7        841      847      %       DQ   First-flush needle P
+                                                                 concentration
+
+N1KCC      numeric       7        848      854      %       DR   First-flush needle K
+                                                                 concentration
+
+N1SCC      numeric       7        855      861      %       DS   First-flush needle S
+                                                                 concentration
+
+N1CACC     numeric       7        862      868      %       DT   First-flush needle
+                                                                 CA concentration
+
+N1MGCC     numeric       7        869      875      %       DU   First-flush needle
+                                                                 Mg concentration
+
+N1MNCC     numeric       7        876      882      ppm     DV   First-flush needle
+                                                                 Mn concentration
+
+N1FECC     numeric       7        883      889      ppm     DW   First-flush needle
+                                                                 Fe concentration
+
+N1CUCC     numeric       7        890      896      ppm     DX   First-flush needle
+                                                                 Cu concentration
+
+N1BCC      numeric       7        897      903      ppm     DY   First-flush needle
+                                                                 B concentration
+
+N1ZNCC     numeric       7        904      910      ppm     DZ   First-flush needle
+                                                                 Zn concentration
+
+N2PCC      numeric       7        911      917      %       EA   Second-flush needle
+                                                                 P concentration
+
+N2KCC      numeric       7        918      924      %       EB   Second-flush needle 
+                                                                 K concentration
+
+N2SCC      numeric       7        925      931      %       EC   Second-flush needle
+                                                                 S concentration
+
+N2CACC     numeric       7        932      938      %       ED   Second-flush needle
+                                                                 CA concentration
+
+N2MGCC     numeric       7        939      945      %       EE   Second-flush needle
+                                                                 Mg concentration
+
+N2MNCC     numeric       7        946      952      ppm     EF   Second-flush needle
+                                                                 Mn concentration
+
+N2FECC     numeric       7        953      959      ppm     EG   Second-flush needle
+                                                                 Fe concentration
+
+N2CUCC     numeric       7        960      966      ppm     EH   Second-flush needle
+                                                                 Cu concentration
+
+N2BCC      numeric       7        967      973      ppm     EI   Second-flush needle
+                                                                 B concentration
+
+N2ZNCC     numeric       7        974      980      ppm     EJ   Second-flush needle
+                                                                 Zn concentration
+
+CDPCC      numeric       7        981      987      %       EK   Candle P
+                                                                 concentration
+
+CDKCC      numeric       7        988      994      %       EL   Candle K
+                                                                 oncentration
+
+CDSCC      numeric       7        995     1001      %       EM   Candle S 
+                                                                 concentration
+
+CDCACC     numeric       7       1002     1008      %       EN   Candle Ca 
+                                                                 concentration
+
+CDMGCC     numeric       7       1009     1015      %       EO   Candle Mg 
+                                                                 concentration
+
+CDMNCC     numeric       7       1016     1022      ppm     EP   Candle Mn 
+                                                                 concentration
+
+CDFECC     numeric       7       1023     1029      ppm     EQ   Candle Fe 
+                                                                 concentration
+
+CDCUCC     numeric       7       1030     1036      ppm     ER   Candle Cu 
+                                                                 concentration
+
+CDBCC      numeric       7       1037     1043      ppm     ES   Candle B
+                                                                 concentration
+
+CDZNCC     numeric       7       1044     1050      ppm     ET   Candle Zn
+                                                                 concentration
+_____________________________________________________________________________________
+
+
+
+
+1-2-3 SPREADSHEET FILES
+
+Five 1-2-3 data files, from which the corresponding flat ASCII
+files described in the preceding section were generated, are also
+provided with this data package:
+
+regr92.wk1 (File 7) is the spreadsheet file from which regr92.dat was generated. The
+listing that describes the contents and format of regr92.dat also indicates the column of
+regr92.wk1 in which each variable is found.
+
+regr93.wk1 (File 8) is the spreadsheet file from which regr93.dat was generated. The
+listing that describes the contents and format of regr93.dat also indicates the column of
+regr93.wk1 in which each variable is found.
+
+trees91.wk1 (File 9) is the spreadsheet file from which trees91.dat was generated. The
+listing that describes the contents and format of trees91.dat also indicates the column of
+trees91.wk1 in which each variable is found.
+
+trees92.wk1 (File 10) is the spreadsheet file from which trees92.dat was generated. The listing
+that describes the contents and format of trees92.dat also indicates the column of trees92.wk1 
+in which each variable is found.
+
+trees93.wk1 (File 11) is the spreadsheet file from which trees93.dat was generated. The listing
+that describes the contents and format of trees93.dat also indicates the column of trees93.wk1 
+in which each variable is found.
+
+
+14. LISTING OF THE FORTRAN DATA RETRIEVAL PROGRAMS
+
+This section lists the five FORTRAN data retrieval programs
+provided by CDIAC with this data base. Each program is designed
+to read one of the five flat ASCII data files.
+
+regr92.for (File 12)
+
+This file is designed to read file regr92.dat:
+
+C ***REGR92.FOR***
+C FORTRAN PROGRAM TO READ THE FILE REGR92.DAT FROM NDP-061A
+C
+      INTEGER C, N, REP, HT
+      REAL DIA, LFBM, STBM, CRBM, FRBM
+      CHARACTER*6 CHBR 
+C
+      OPEN (UNIT=1, FILE='regr92.dat')
+    1 CONTINUE                        
+      READ(1,100,END=99) C, N, CHBR, REP, HT, DIA, LFBM, STBM,
+     + CRBM, FRBM       
+  100 FORMAT(2I6,A6,2I6,5F6.2)   
+C
+      GO TO 1 
+   99 CONTINUE         
+      STOP       
+      END
+
+
+regr93.for (File 13)
+
+This file is designed to read file regr93.dat:
+
+C ***REGR93.FOR***
+C FORTRAN PROGRAM TO READ THE FILE REGR93.DAT FROM NDP-061A
+C
+      INTEGER C, N, REP
+      REAL HT, DIA, LFBM, BRBM, STBM, RTBM
+      CHARACTER*6 CHBR 
+C
+      OPEN (UNIT=1, FILE='regr93.dat')
+    1 CONTINUE                        
+      READ(1,100,END=99) C, N, CHBR, REP, HT, DIA, LFBM, BRBM,
+     + STBM, RTBM       
+  100 FORMAT(2I6,A6,I6,2F6.1,4F6.2)
+C
+      GO TO 1 
+   99 CONTINUE         
+      STOP       
+      END
+
+
+trees91.for (File 14)
+
+This file is designed to read file trees91.dat:
+
+C ***TREES91.FOR***
+C FORTRAN PROGRAM TO READ THE FILE TREES91.DAT FROM NDP-061A
+C
+      INTEGER C, N, REP, LFBCC, STBCC, RTBCC
+      REAL LFBM, STBM, RTBM, LFNCC, STNCC, RTNCC, LFCACC,
+     + STCACC, RTCACC, LFKCC, STKCC, RTKCC, LFMGCC, STMGCC,
+     + RTMGCC, LFPCC, STPCC, RTPCC, LFSCC, STSCC, RTSCC
+      CHARACTER*6 CHBR 
+C
+      OPEN (UNIT=1, FILE='trees91.dat')
+    1 CONTINUE                        
+      READ(1,100,END=99) C, N, CHBR, REP, LFBM, STBM, RTBM, LFNCC,
+     + STNCC, RTNCC, LFBCC, STBCC, RTBCC, LFCACC, STCACC, RTCACC,
+     + LFKCC, STKCC, RTKCC, LFMGCC, STMGCC, RTMGCC, LFPCC, STPCC,
+     + RTPCC, LFSCC, STSCC, RTSCC
+C 
+  100 FORMAT(2I6,A6,I6,6F6.2,3I6,15F6.2)
+C
+      GO TO 1 
+   99 CONTINUE         
+      STOP       
+      END
+
+
+trees92.for (File 15)
+
+This file is designed to read file trees92.dat:
+
+C ***TREES92.FOR***
+C FORTRAN PROGRAM TO READ THE FILE TREES92.DAT FROM NDP-061A
+C
+      INTEGER C, N, REP, HT
+      REAL DIA, LFNCC, BRNCC, STNCC, TRNCC, MRNCC, FRNCC,
+     + LFCACC, STCACC, BRCACC, FRCACC, MRCACC, TRCACC,
+     + LFMGCC, STMGCC, BRMGCC, FRMGCC, MRMGCC, TRMGCC,
+     + LFSCC, STSCC, BRSCC, FRSCC, MRSCC, TRSCC, 
+     + LFCUCC, STCUCC, BRCUCC, FRCUCC, MRCUCC, TRCUCC,
+     + LFMNCC, STMNCC, BRMNCC, FRMNCC, MRMNCC, TRMNCC, 
+     + LFZNCC, STZNCC, BRZNCC, FRZNCC, MRZNCC, TRZNCC,
+     + LFKCC, STKCC, BRKCC, FRKCC, MRKCC, TRKCC, 
+     + LFPCC, STPCC, BRPCC, FRPCC, MRPCC, TRPCC,
+     + LFBCC, STBCC, BRBCC, FRBCC, MRBCC, TRBCC, 
+     + LFFECC, STFECC, BRFECC, FRFECC, MRFECC, TRFECC
+      CHARACTER*7 CHBR 
+C
+      OPEN (UNIT=1, FILE='trees92.dat')
+    1 CONTINUE                        
+      READ(1,100,END=99) C, N, CHBR, REP, HT,
+     + DIA, LFNCC, BRNCC, STNCC, TRNCC, MRNCC, FRNCC,
+     + LFCACC, STCACC, BRCACC, FRCACC, MRCACC, TRCACC,
+     + LFMGCC, STMGCC, BRMGCC, FRMGCC, MRMGCC, TRMGCC,
+     + LFSCC, STSCC, BRSCC, FRSCC, MRSCC, TRSCC, 
+     + LFCUCC, STCUCC, BRCUCC, FRCUCC, MRCUCC, TRCUCC,
+     + LFMNCC, STMNCC, BRMNCC, FRMNCC, MRMNCC, TRMNCC, 
+     + LFZNCC, STZNCC, BRZNCC, FRZNCC, MRZNCC, TRZNCC,
+     + LFKCC, STKCC, BRKCC, FRKCC, MRKCC, TRKCC, 
+     + LFPCC, STPCC, BRPCC, FRPCC, MRPCC, TRPCC,
+     + LFBCC, STBCC, BRBCC, FRBCC, MRBCC, TRBCC, 
+     + LFFECC, STFECC, BRFECC, FRFECC, MRFECC, TRFECC     
+C 
+  100 FORMAT(2I7,A7,2I7,67F7.2)
+C
+      GO TO 1 
+   99 CONTINUE         
+      STOP       
+      END
+
+
+trees93.for (File 16)
+
+This file is designed to read file trees93.dat:
+
+C ***TREES93.FOR***
+C FORTRAN PROGRAM TO READ THE FILE TREES93.DAT FROM NDP-061A
+C
+      INTEGER C, N, REP, HT
+      REAL DIA, N1CCC, N1NCC, N2CCC, N2NCC, CDCCC,
+     + CDNCC, NOCCC, NONCC, NSCCC, NSNCC, BRCCC,
+     + BRNCC, FRCCC, FRNCC, TRCCC, TRNCC, LRCCC,
+     + LRNCC, TTCCC, TTNCC, TMCCC, TMNCC, TBCCC, TBNCC, NOPCC,
+     + NOKCC, NOSCC, NOCACC, NOMGCC, NOMNCC, NOFECC, NOCUCC,
+     + NOBCC, NOZNCC, TRPCC, TRKCC, TRSCC, TRCACC, TRMGCC, TRMNCC,
+     + TRFECC, TRCUCC, TRBCC, TRZNCC, LRPCC, LRKCC, LRSCC, LRCACC,
+     + LRMGCC, LRMNCC, LRFECC, LRCUCC, LRBCC, LRZNCC, FRPCC,
+     + FRKCC, FRSCC, FRCACC, FRMGCC, FRMNCC, FRFECC, FRCUCC,
+     + FRBCC, FRZNCC, BRPCC, BRKCC, BRSCC, BRCACC, BRMGCC,
+     + BRMNCC, BRFECC, BRCUCC, BRBCC, BRZNCC, NSPCC, NSKCC,
+     + NSSCC, NSCACC, NSMGCC, NSMNCC, NSFECC, NSCUCC, NSBCC,
+     + NSZNCC, TTPCC, TTKCC, TTSCC, TTCACC, TTMGCC, TTMNCC,
+     + TTFECC, TTCUCC, TTBCC, TTZNCC, TMPCC, TMKCC, TMSCC,
+     + TMCACC, TMMGCC, TMMNCC, TMFECC, TMCUCC, TMBCC, TMZNCC,
+     + TBPCC, TBKCC, TBSCC, TBCACC, TBMGCC, TBMNCC, TBFECC, TBCUCC,
+     + TBBCC, TBZNCC, N1PCC, N1KCC, N1SCC, N1CACC, N1MGCC, N1MNCC,
+     + N1FECC, N1CUCC, N1BCC, N1ZNCC, N2PCC, N2KCC, N2SCC, N2CACC,
+     + N2MGCC, N2MNCC, N2FECC, N2CUCC,N2BCC, N2ZNCC, CDPCC, CDKCC,
+     + CDSCC, CDCACC, CDMGCC, CDMNCC, CDFECC, CDCUCC, CDBCC, CDZNCC
+      CHARACTER*7 CHBR 
+C
+      OPEN (UNIT=1, FILE='trees93.dat')
+    1 CONTINUE                        
+      READ(1,100,END=99) C, N, CHBR, REP, HT, DIA, N1CCC,
+     + N1NCC, N2CCC, N2NCC, CDCCC, CDNCC, NOCCC, NONCC, NSCCC,
+     + NSNCC, BRCCC, BRNCC, FRCCC, FRNCC, TRCCC, TRNCC, LRCCC,
+     + LRNCC, TTCCC, TTNCC, TMCCC, TMNCC, TBCCC, TBNCC, NOPCC,
+     + NOKCC, NOSCC, NOCACC, NOMGCC, NOMNCC, NOFECC, NOCUCC,
+     + NOBCC, NOZNCC, TRPCC, TRKCC, TRSCC, TRCACC, TRMGCC, TRMNCC,
+     + TRFECC, TRCUCC, TRBCC, TRZNCC, LRPCC, LRKCC, LRSCC, LRCACC,
+     + LRMGCC, LRMNCC, LRFECC, LRCUCC, LRBCC, LRZNCC, FRPCC,
+     + FRKCC, FRSCC, FRCACC, FRMGCC, FRMNCC, FRFECC, FRCUCC,
+     + FRBCC, FRZNCC, BRPCC, BRKCC, BRSCC, BRCACC, BRMGCC,
+     + BRMNCC, BRFECC, BRCUCC, BRBCC, BRZNCC, NSPCC, NSKCC,
+     + NSSCC, NSCACC, NSMGCC, NSMNCC, NSFECC, NSCUCC, NSBCC,
+     + NSZNCC, TTPCC, TTKCC, TTSCC, TTCACC, TTMGCC, TTMNCC,
+     + TTFECC, TTCUCC, TTBCC, TTZNCC, TMPCC, TMKCC, TMSCC,
+     + TMCACC, TMMGCC, TMMNCC, TMFECC, TMCUCC, TMBCC, TMZNCC,
+     + TBPCC, TBKCC, TBSCC, TBCACC, TBMGCC, TBMNCC, TBFECC, TBCUCC,
+     + TBBCC, TBZNCC, N1PCC, N1KCC, N1SCC, N1CACC, N1MGCC, N1MNCC,
+     + N1FECC, N1CUCC, N1BCC, N1ZNCC, N2PCC, N2KCC, N2SCC, N2CACC,
+     + N2MGCC, N2MNCC, N2FECC, N2CUCC,N2BCC, N2ZNCC, CDPCC, CDKCC,
+     + CDSCC, CDCACC, CDMGCC, CDMNCC, CDFECC, CDCUCC, CDBCC, CDZNCC    
+C 
+  100 FORMAT(2I7,A7,2I7,F7.1,144F7.2)
+C
+      GO TO 1 
+   99 CONTINUE         
+      STOP       
+      END
+
+
+15. LISTING OF THE SAS DATA RETRIEVAL PROGRAMS
+
+This section lists the five SAS data retrieval programs provided by CDIAC with this data base.
+Each program is designed to read one of the five flat ASCII data files.
+
+regr92.sas (File 17)
+
+This file is designed to read file regr92.dat:
+
+*REGR92.SAS - SAS PROGRAM TO READ REGR92.DAT FROM NDP-061A;
+
+DATA REGR92;
+INFILE 'regr92.dat';
+INPUT C 1-6 N 7-12 @13 CHBR $CHAR6. REP 19-24 HT 25-30 DIA 31-36
+LFBM 37-42 STBM 43-48 CRBM 49-54 FRBM 55-60;
+RUN;
+
+
+regr93.sas (File 18)
+
+This file is designed to read file regr93.dat:
+
+*REGR93.SAS - SAS PROGRAM TO READ REGR93.DAT FROM NDP-061A;
+
+DATA REGR93;
+INFILE 'regr93.dat';
+INPUT C 1-6 N 7-12 @13 CHBR $CHAR6. REP 19-24 HT 25-30 DIA 31-36
+LFBM 37-42 BRBM 43-48 STBM 49-54 RTBM 55-60;
+RUN;
+
+
+trees91.sas (File 19)
+
+This file is designed to read file trees91.dat:
+
+*TREES91.SAS - SAS PROGRAM TO READ TREES91.DAT FROM NDP-061A;
+
+DATA TREES91;
+INFILE 'trees91.dat';
+INPUT C 1-6 N 7-12 @13 CHBR $CHAR6. REP 19-24 LFBM 25-30
+STBM 31-36 RTBM 37-42 LFNCC 43-48 STNCC 49-54 RTNCC 55-60
+LFBCC 61-66 STBCC 67-72 RTBCC 73-78 LFCACC 79-84 STCACC 85-90
+RTCACC 91-96 LFKCC 97-102 STKCC 103-108 RTKCC 109-114
+LFMGCC 115-120 STMGCC 121-126 RTMGCC 127-132 LFPCC 133-138
+STPCC  139-144 RTPCC 145-150 LFSCC 151-156 STSCC 157-162
+RTSCC 163-168;
+RUN;
+
+
+trees92.sas (File 20)
+
+This file is designed to read file trees92.dat:
+
+*TREES92.SAS - SAS PROGRAM TO READ TREES92.DAT FROM NDP-061A;
+
+DATA TREES92;
+INFILE 'trees92.dat' lrecl=504;
+INPUT C 1-7 N 8-14 @15 CHBR $CHAR7. REP 22-28 HT 29-35
+DIA 36-42 LFNCC 43-49 BRNCC 50-56 STNCC 57-63 TRNCC 64-70
+MRNCC 71-77 FRNCC 78-84 LFCACC 85-91 STCACC 92-98
+BRCACC 99-105 FRCACC 106-112 MRCACC 113-119 TRCACC 120-126
+LFMGCC 127-133 STMGCC 134-140 BRMGCC 141-147 FRMGCC 148-154
+MRMGCC 155-161 TRMGCC 162-168 LFSCC 169-175 STSCC 176-182
+BRSCC 183-189 FRSCC 190-196 MRSCC 197-203 TRSCC 204-210
+LFCUCC 211-217 STCUCC 218-224 BRCUCC 225-231 FRCUCC 232-238
+MRCUCC 239-245 TRCUCC 246-252 LFMNCC 253-259 STMNCC 260-266
+BRMNCC 267-273 FRMNCC 274-280 MRMNCC 281-287 TRMNCC 288-294
+LFZNCC 295-301 STZNCC 302-308 BRZNCC 309-315 FRZNCC 316-322
+MRZNCC 323-329 TRZNCC 330-336 LFKCC 337-343 STKCC 344-350
+BRKCC 351-357 FRKCC 358-364 MRKCC 365-371 TRKCC 372-378
+LFPCC 379-385 STPCC 386-392 BRPCC 393-399 FRPCC 400-406
+MRPCC 407-413 TRPCC 414-420 LFBCC 421-427 STBCC 428-434
+BRBCC 435-441 FRBCC 442-448 MRBCC 449-455 TRBCC 456-462
+LFFECC 463-469 STFECC 470-476 BRFECC 477-483 FRFECC 484-490
+MRFECC 491-497 TRFECC 498-504;
+RUN;
+
+
+trees93.sas (File 21)
+
+This file is designed to read file trees93.dat:
+
+*TREES93.SAS - SAS PROGRAM TO READ TREES93.DAT FROM NDP-061A;
+
+DATA TREES93;
+INFILE 'trees93.dat' lrecl=1050;
+INPUT C 1-7 N 8-14 @15 CHBR $CHAR7. REP 22-28 HT 29-35
+DIA 36-42 N1CCC 43-49 N1NCC 50-56 N2CCC 57-63 N2NCC 64-70
+CDCCC 71-77 CDNCC 78-84 NOCCC 85-91 NONCC 92-98 
+NSCCC 99-105 NSNCC 106-112 BRCCC 113-119 BRNCC 120-126 
+FRCCC 127-133 FRNCC 134-140 TRCCC 141-147 TRNCC 148-154
+LRCCC 155-161 LRNCC 162-168 TTCCC 169-175 
+TTNCC 176-182 TMCCC 183-189 TMNCC 190-196 TBCCC 197-203 
+TBNCC 204-210 NOPCC 211-217 NOKCC 218-224 NOSCC 225-231 
+NOCACC 232-238 NOMGCC 239-245 NOMNCC 246-252 NOFECC 253-259 
+NOCUCC 260-266 NOBCC 267-273 NOZNCC 274-280 TRPCC 281-287 
+TRKCC 288-294 TRSCC 295-301 TRCACC 302-308 TRMGCC 309-315 
+TRMNCC 316-322 TRFECC 323-329 TRCUCC 330-336 TRBCC 337-343 
+TRZNCC 344-350 LRPCC 351-357 LRKCC 358-364 LRSCC 365-371 
+LRCACC 372-378 LRMGCC 379-385 LRMNCC 386-392 LRFECC 393-399 
+LRCUCC 400-406 LRBCC 407-413 LRZNCC 414-420 FRPCC 421-427 
+FRKCC 428-434 FRSCC 435-441 FRCACC 442-448 FRMGCC 449-455 
+FRMNCC 456-462 FRFECC 463-469 FRCUCC 470-476 FRBCC 477-483 
+FRZNCC 484-490 BRPCC 491-497 BRKCC 498-504 BRSCC 505-511 
+BRCACC 512-518 BRMGCC 519-525 BRMNCC 526-532 BRFECC 533-539 
+BRCUCC 540-546 BRBCC 547-553 BRZNCC 554-560 NSPCC 561-567 
+NSKCC 568-574 NSSCC 575-581 NSCACC 582-588 NSMGCC 589-595 
+NSMNCC 596-602 NSFECC 603-609 NSCUCC 610-616 NSBCC 617-623 
+NSZNCC 624-630 TTPCC 631-637 TTKCC 638-644 TTSCC 645-651 
+TTCACC 652-658 TTMGCC 659-665 TTMNCC 666-672 TTFECC 673-679 
+TTCUCC 680-686 TTBCC 687-693 TTZNCC 694-700 TMPCC 701-707 
+TMKCC 708-714 TMSCC 715-721 TMCACC 722-728 TMMGCC 729-735 
+TMMNCC 736-742 TMFECC 743-749 TMCUCC 750-756 TMBCC 757-763 
+TMZNCC 764-770 TBPCC 771-777 TBKCC 778-784 TBSCC 785-791 
+TBCACC 792-798 TBMGCC 799-805 TBMNCC 806-812 TBFECC 813-819 
+TBCUCC 820-826 TBBCC 827-833 TBZNCC 834-840 N1PCC 841-847 
+N1KCC 848-854 N1SCC 855-861 N1CACC 862-868 N1MGCC 869-875 
+N1MNCC 876-882 N1FECC 883-889 N1CUCC 890-896 N1BCC 897-903 
+N1ZNCC 904-910 N2PCC 911-917 N2KCC 918-924 N2SCC 925-931 
+N2CACC 932-938 N2MGCC 939-945 N2MNCC 946-952 N2FECC 953-959 
+N2CUCC 960-966 N2BCC 967-973 N2ZNCC 974-980 CDPCC 981-987 
+CDKCC 988-994 CDSCC 995-1001 CDCACC 1002-1008 CDMGCC 1009-1015 
+CDMNCC 1016-1022 CDFECC 1023-1029 CDCUCC 1030-1036  
+CDBCC 1037-1043 CDZNCC 1044-1050;
+RUN;
+
+
+16. PARTIAL LISTINGS OF THE FLAT ASCII DATA FILES
+
+This section provides a sample listing of the first and last two data records in the 
+five flat ASCII data files provided with this data base. Sample listing for regr92.dat:
+
+     First two data records:
+
+     1     1   CL6     3    38 20.38 16.13 15.00 15.65  3.15
+     1     1   CL6    17    29 14.42 12.66 25.18 -9.99 -9.99
+
+     Last two data records:
+
+     4     3    D4     4    33 19.92 65.00 56.91 -9.99 -9.99
+     4     3    D4    15    43 23.99 41.42 51.87 -9.99 -9.99
+
+
+Sample listing for regr93.dat:
+
+     First two data records:
+
+     1     1   CL6     7  52.4  27.8116.10 50.00 61.60 63.38
+     1     1   CL6     8  52.5  14.6 45.90 12.50 37.34 -9.99
+
+     Last two data records:
+
+     4     3    D4    11  53.1  39.4367.77 82.80208.85 -9.99
+     4     3    D4    21  53.5  40.4284.20 77.50318.40135.81
+
+
+Sample listing for trees91.dat:
+
+     First two data records:
+
+     1     1   CL6     1  0.43  0.13  0.29  1.84  0.40  0.96    39    18    41 
+0.26  0.16  0.16  0.88  1.19  0.62  0.11  0.13  0.06  0.23  0.31  0.17  0.13 
+0.17  0.14
+     1     1   CL7     1  0.40  0.15  0.25  1.82  0.37  0.95    36    26    35 
+0.28  0.20  0.17  0.93  1.34  0.49  0.10  0.18  0.06  0.22  0.22  0.13  0.22 
+0.28  0.13
+
+
+     Last two data records:
+
+     4     3    C6    -9  1.07  0.45  0.59  1.15  0.61  0.69    33    21    21 
+0.30  0.24  0.16  0.82  1.19  0.39  0.09  0.17  0.07  0.24  0.31  0.13  0.11 
+0.18  0.11
+     4     3    D4    -9  1.22  0.33  0.89  1.15  0.54  0.51    42    21    17 
+0.24  0.18  0.13  0.77  1.16  0.46  0.09  0.12  0.06  0.22  0.25  0.14  0.13 
+0.17  0.11
+
+
+Sample listing for trees92a.dat:
+
+     First two data records:
+
+      1      1    CL6      3     38  20.38   2.25  -9.99   0.38   0.27   0.38  
+0.65   0.34   0.16  -9.99   0.33   0.22   0.19   0.14   0.10  -9.99   0.06  
+0.05   0.06   0.21   0.13  -9.99   0.04   0.03   0.05   3.60   4.50  -9.99  
+3.00   2.20   1.60 400.00 201.00  -9.99  63.00  55.00  77.00  77.00  64.00 
+-9.99  33.00  61.00  17.00   0.91   0.67  -9.99   0.06   0.04   0.13   0.24  
+0.11  -9.99   0.05   0.03   0.04  33.00  11.00  -9.99  19.00  11.00   9.00
+472.00 623.00  -9.99 618.00 462.00 365.00
+      1      1    CL7      3     39  14.15   1.59  -9.99   0.29   0.34   0.28  
+0.51   0.50   0.14  -9.99   0.36   0.21   0.24   0.13   0.10  -9.99   0.07  
+0.05   0.07   0.19   0.12  -9.99   0.04   0.03   0.04   8.70   3.60  -9.99  
+2.80   2.00   3.10 414.00 176.00  -9.99  76.00  56.00  83.00 111.00  62.00 
+-9.99  23.00  19.00  19.00   0.77   0.70  -9.99   0.06   0.07   0.09   0.15  
+0.12  -9.99   0.04   0.03   0.04  38.00  22.00  -9.99  14.00   8.00  14.00
+581.00 250.00  -9.99 756.00 353.00 354.00
+
+
+     Last two data records:
+
+      4      3     C6      3     31  21.20   1.40  -9.99   0.55   0.28   0.31  
+0.41   0.39   0.17  -9.99   0.33   0.20   0.23   0.12   0.12  -9.99   0.07  
+0.05   0.07   0.08   0.11  -9.99   0.04   0.02   0.04   2.40   2.50  -9.99  
+3.50   2.10   2.80 397.00 255.00  -9.99  89.00  64.00  88.00  61.00  46.00 
+-9.99  17.00  10.00   8.00   0.63   0.64  -9.99   0.03   0.03   0.09   0.13  
+0.21  -9.99   0.05   0.03   0.04  35.00  38.00  -9.99  15.00   8.00  11.00
+401.00 436.00  -9.99 700.00 367.00 297.00
+      4      3     D4      3     41  20.56   1.36   0.58   0.16   0.33   0.33  
+0.47   0.28   0.07   0.33   0.19   0.10   0.17   0.13   0.09   0.15   0.05  
+0.04   0.06   0.08   0.05   0.06   0.04   0.02   0.04   4.20   8.80   5.30  
+2.20   3.50   1.90 280.00 116.00 271.00  79.00  56.00  94.00  66.00  29.00 
+58.00  21.00  13.00  14.00   0.62   0.40   0.63   0.07   0.08   0.16   0.12  
+0.05   0.10   0.04   0.03   0.04  27.00   8.00  14.00  11.00   7.00  11.00
+286.00  43.00  11.00 499.00 251.00 239.00
+
+
+Sample listing for trees93.dat:
+
+     First two data records:
+
+      1      1    CL6      1     93   34.8  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99
+-9.99  -9.99  -9.99 
+      1      1    CL6      2     95   33.8  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99
+-9.99  -9.99  -9.99 
+
+     Last two data records:
+
+      4      3     D4     19     97   41.8  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99
+-9.99  -9.99  -9.99 
+      4      3     D4     21    114   40.0  38.69   1.06  -9.99  -9.99  49.87  
+1.11  49.66   1.36  -9.99  -9.99  49.37   0.66  45.81   0.58  48.24   0.15 
+47.84   0.31  48.11   0.58  47.94   0.21  47.87   0.18   0.12   0.46   0.14  
+0.35   0.20 105.20 395.40   3.00  25.00  38.00   0.03   0.19   0.05   0.08  
+0.06  53.40 139.20   5.00   8.00  15.00   0.07   0.29   0.08   0.14   0.09 
+80.00 404.00   4.00   7.00  16.00   0.11   0.25   0.10   0.25   0.10 
+99.001173.00  14.00  23.00  14.00  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99 
+-9.99  -9.99  -9.99   0.17   0.75   0.08   0.20   0.23 111.00  69.00  10.00 
+15.00  36.00   0.11   0.58   0.06   0.10   0.11  89.00  56.00   6.00  14.00 
+31.00   0.06   0.37   0.05   0.10   0.08  70.00  31.00   4.00  12.00  22.00  
+0.15   0.57   0.12   0.32   0.20 160.00 121.00   5.00  29.00  45.00  -9.99 
+-9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99  -9.99   0.22   0.67  
+0.11   0.13   0.13 110.00
