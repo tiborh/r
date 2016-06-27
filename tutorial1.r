@@ -12,8 +12,24 @@ mean(a)
 var(a)
 typeof(a)                               # double
 
-b <- numeric(10)                        # 10 zeros
+b <- numeric(10)
+print(b)                                # 10 zeros
 typeof(b)                               # list
+
+b <- b + 5                              # each is 5
+b <- b - 1
+print(b)
+sqrt(b)                                 # 2
+exp(b)                                  # 54.59815 == e ^ 4
+log(b)
+exp(log(b))                             # same
+(b + sqrt(b))/(exp(2)+1)
+a[5] <- 11                           # to avoid the message:
+## In a + b : longer object length is not a multiple of shorter object length
+a + b                                   # a is used twice over to match b
+(a+3)/(sqrt(5-b)*2-1)
+min(a,b)                                # 3
+pmin(a,b)                               # [1] 3 4 4 4 4 3 4 4 4 4
 
 c <- character(10)
 typeof(c)                               # character
@@ -22,6 +38,21 @@ c                                       # empty strings
 c <- c("零","一","二","三","四","五","六","七","八","九","十")
 summary(c)                              # length, character, mode
 typeof(c)                               # "character"
+
+## some more vector operations
+
+d <- sample(0:10)
+mean(d)
+median(d)
+quantile(d)
+sd(d)
+var(d)
+summary(d)
+min(d)
+max(d)
+sum(d)
+sort(d)
+sort(d,decreasing=T)
 
 ## csv
 help(read.csv)                          # the help of the function
@@ -133,6 +164,11 @@ a||b                                    # T
 xor(a,b)                                # T F F
 a&b                                     # F F T
 a&&b                                    # F
+
+a <- TRUE
+if (a) print("good")
+b <- FALSE
+if (!b) print("bad")
 
 ## one way tables
 a <- factor(sample(sample(LETTERS,2),10,replace=TRUE))
