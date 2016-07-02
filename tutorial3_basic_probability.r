@@ -99,3 +99,21 @@ mtext("mean=3, sd=0.1", adj = 0)
 
 ## T, Binomial and Chi distributions are skipped
 
+help(par)
+
+randoms <- function(num) {
+    par(mfrow=c(3,2))                     # square region
+    plot(runif(num,1,10),main=paste0("Uniform Distribution (n = ",num))
+    plot(sort(runif(num,1,10)),main=paste0("Sorted Uniform Distribution (n = ",num))
+    plot(rnorm(num,0,5),main=paste0("Normal Distribution (n = ",num))
+    plot(sort(rnorm(num,0,5)),main=paste0("Sorted Normal Distribution (n = ",num))
+    plot(sample(seq(1,num*100,1),num),main=paste0("Sampling from 100x (n = ",num))
+    plot(sort(sample(seq(1,num*100,1),num)),main=paste0("Sorted Sampling from 100x (n = ",num))
+    par(mfrow=c(1,1))
+}
+
+randoms(30)
+randoms(50)
+randoms(100)
+randoms(200)
+randoms(500)

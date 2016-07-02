@@ -1,6 +1,10 @@
 ## simple vector
 a <- c(3,5,7,9)                     # vector
-a
+print(a)                            # [1] 3 5 7 9
+names(a) = c("一","二","三","四")   # names to data
+print(a)                            # 一 二 三 四
+                                        #  3  5  7  9
+
 a[1]                                # first element
 a[0]                                # type of the variable
 a[5]                                # NA
@@ -8,8 +12,12 @@ a[-1]                               # all minus the first
 a[-(1:2)]                           # only the second two
 a[c(1,4)]                           # first and fourth
 a[c(-1,-4)]                         # all but first and fourth
-mean(a)
-var(a)
+a["一"]                             # named access
+a[c("二","三")]                     # accessing two values
+## a["二":"四"] won't work
+
+mean(a)                                 # 6
+var(a)                                  # [1] 6.666667
 typeof(a)                               # double
 
 b <- numeric(10)
@@ -53,6 +61,12 @@ max(d)
 sum(d)
 sort(d)
 sort(d,decreasing=T)
+
+e <- sample(-50:50,10)
+e > 0                                   # a vector of booleans
+names(e) = c[2:11]
+e > 0                                   # result has the same names
+e[e>0]                                  # pick out the positive values only
 
 ## csv
 help(read.csv)                          # the help of the function
@@ -182,8 +196,11 @@ str(b)
 summary(b)
 
 ## matrix
-a <- matrix(c(4:2),ncol=3,byrow=TRUE)
+a <- matrix(c(4:2),ncol=3,byrow=TRUE)   # ncol = number of columns, nrow is also possible
+print(a)
 colnames(a) <- c(LETTERS[1:3])
+rownames(a) <- c("a")
+print(a)
 str(a)
 summary(a)
 attributes(a)
@@ -191,6 +208,50 @@ typeof(a)                               # integer
 class(a)                                # matrix
 a <- as.table(a)
 class(a)                                # table
+## matrix from vectors
+r1 <- 1:3
+r2 <- 4:6
+r3 <- 7:9
+c(r1,r2,r3)                             # vectors merged into one
+m1 <- matrix(c(r1,r2,r3),byrow=T,nrow=3)
+print(m1)
+colnames(m1) = c(LETTERS[1:3])
+rownames(m1) = c(letters[1:3])
+## all in one step:
+m1 <- matrix(c(r1,r2,r3),byrow=T,nrow=3,dimnames=list(c(letters[1:3]),c(LETTERS[1:3])))
+print(m1)
+rowSums(m1)
+colSums(m1)
+sum(m1)
+plot(m1,main="Three Points Using Columns A and B")
+## adding them to table
+Total = rowSums(m1)                     # to have the "name" too
+m1 = cbind(m1,Total)
+Total = colSums(m1)
+m1 = rbind(m1,Total)
+print(m1)
+## Two matrices can be combined the same way:
+m1 <- matrix(1:9,byrow=T,nrow=3,dimnames=list(c(letters[1:3]),c(LETTERS[1:3])))
+m2 <- matrix(10:18,byrow=T,nrow=3,dimnames=list(c(letters[4:6]),c(LETTERS[1:3])))
+m3 <- rbind(m1,m2)
+print(m3)
+
+## matrix access:
+m3[1]                                   # meaning [1,1]
+m3[2]                                   # meaning [2,1]
+m3[1,]                                  # first row
+m3["a",]
+m3[,1]                                  # first column
+m3[,"A"]
+m1[-1,]                                 # all but first row
+m1[,-1]                                 # all but first col
+m3[3:5,]                                # rows 3 to 5
+
+m1*2
+m1/2
+m2-m1                                   # row names of the first are kept
+m1+m2
+m1*m2                                   # corresponding element pairs
 
 ## two-way tables
 a <- sample(c("never","sometimes","often","usually","always"),20,replace=T)
@@ -209,3 +270,33 @@ print(sexsmoke)
 class(sexsmoke)                         # matrix
 sexsmoke <- as.table(sexsmoke)
 class(sexsmoke)                         # table
+
+## factors
+gender.vector <- c("Male", "Female", "Female", "Male", "Male")
+typeof(gender.vector)                   # "character"
+class(gender.vector)                    # "character"
+str(gender.vector)                      #  chr [1:5] "Male" "Female" "Female" "Male" "Male"
+factor.gender.vector <- factor(gender.vector)
+typeof(factor.gender.vector)            # "integer"
+class(factor.gender.vector)             # "factor"
+str(factor.gender.vector)               #  Factor w/ 2 levels "Female","Male": 2 1 1 2 2
+## ordered factor
+temperature.vector <- c("high", "medium", "high", "medium","low", "high","low", "medium")
+factor.temperature.vector <- factor(temperature.vector, order = TRUE, levels = c("low", "medium", "high"))
+levels(factor.temperature.vector) = c("L","M","H") # renaming levels
+factor.temperature.vector
+summary(temperature.vector)             #    Length     Class      Mode 
+                                        #         8 character character
+summary(factor.temperature.vector)      #    low medium   high 
+                                        #      2      3      3
+ftv <- factor.temperature.vector
+plot(summary(factor.temperature.vector)) # three points, no names
+ftv[1]                                   # factor name is returned, not the integer number
+ftv[2]
+ftv[3]
+ftv[1] < ftv[2]                          # works when they are ordered
+
+## low disappears in the following:
+factor.temperature.vector <- factor(temperature.vector, order = TRUE) # alphabetical levels
+levels(factor.temperature.vector) <- factor(temperature.vector,order=T) # order of appearance
+
