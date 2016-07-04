@@ -24,3 +24,7 @@ rnorm
 
 str(apply)
 ## function (X, MARGIN, FUN, ...)
+
+## to see only the examples (plots are drawn)
+example(min)
+
