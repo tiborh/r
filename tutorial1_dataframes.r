@@ -26,6 +26,17 @@ days.jp.hir <- c("げtづようび","かようび","すいようび","もくよ�
 days = cbind(days,days.jp.hir)
 days
 
+## unnamed reference:
+days[1]                                 # column
+days[[1]]                               # column as vector
+days[,1]                                # a column as vector
+
+## named reference:
+rownames(days) = days$d.num
+days["一",]                             # a row
+days["一","d.num"]                      # a cell
+days$d.num                              # a column
+
 ## alternatively:
 rownames(days) = days$d.num
 days = days[,-1]

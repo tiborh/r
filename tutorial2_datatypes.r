@@ -68,6 +68,21 @@ names(e) = c[2:11]
 e > 0                                   # result has the same names
 e[e>0]                                  # pick out the positive values only
 
+## logical operations on vectors
+f <- sample(10,5)
+g <- sample(10,5)
+print(f)
+print(g)
+f>g
+f==g
+f<g
+f<g | g<f              # if f==g gives back all FALSE, this one gives back all TRUE
+f < 5 | g > 5                           # one logival vector from two unrelated sources
+3 < f & g < 7
+5 <= f | 5 <= g                         # one or both condition
+## as TRUE == 1, sum can be used as a count() function, which is missing from R:
+sum(5 <= f | 5 <= g)
+
 ## data frames
 a <- 1:4
 b <- sample(seq(2,8,2))                 # randomise order of elements
@@ -84,6 +99,10 @@ b <- c(FALSE,FALSE,TRUE)
 typeof(a)                               # each is "logical"
 class(a)
 mode(a)
+F<T                                     # under the hood F is zero, T is one
+T<F
+T==1                                    # T
+F==0                                    # T
 
 a|b                                     # T F T
 a||b                                    # T
@@ -108,6 +127,18 @@ str(b)
 summary(b)
 
 ## matrix
+
+## recipe 1
+matrix(0,3,4)                           # a simple matrix of zeroes
+matrix(1:12,3,4)                        # fill it up with numbers
+
+## recipe 2
+a <- 1:8                               # starting with a vector
+dim(a) <- c(2,4)                       # giving it a dimension
+print(a)
+class(a)                                # matrix
+
+## recipe 3
 a <- matrix(c(4:2),ncol=3,byrow=TRUE)   # ncol = number of columns, nrow is also possible
 print(a)
 colnames(a) <- c(LETTERS[1:3])
@@ -120,6 +151,8 @@ typeof(a)                               # integer
 class(a)                                # matrix
 a <- as.table(a)
 class(a)                                # table
+
+## recipe 4
 ## matrix from vectors
 r1 <- 1:3
 r2 <- 4:6
@@ -129,6 +162,8 @@ m1 <- matrix(c(r1,r2,r3),byrow=T,nrow=3)
 print(m1)
 colnames(m1) = c(LETTERS[1:3])
 rownames(m1) = c(letters[1:3])
+
+## recipe 5
 ## all in one step:
 m1 <- matrix(c(r1,r2,r3),byrow=T,nrow=3,dimnames=list(c(letters[1:3]),c(LETTERS[1:3])))
 print(m1)
@@ -136,6 +171,7 @@ rowSums(m1)
 colSums(m1)
 sum(m1)
 plot(m1,main="Three Points Using Columns A and B")
+
 ## adding them to table
 Total = rowSums(m1)                     # to have the "name" too
 m1 = cbind(m1,Total)
@@ -192,6 +228,9 @@ factor.gender.vector <- factor(gender.vector)
 typeof(factor.gender.vector)            # "integer"
 class(factor.gender.vector)             # "factor"
 str(factor.gender.vector)               #  Factor w/ 2 levels "Female","Male": 2 1 1 2 2
+levels(factor.gender.vector)
+as.integer(factor.gender.vector)        # same as in str()
+
 ## ordered factor
 temperature.vector <- c("high", "medium", "high", "medium","low", "high","low", "medium")
 factor.temperature.vector <- factor(temperature.vector, order = TRUE, levels = c("low", "medium", "high"))
