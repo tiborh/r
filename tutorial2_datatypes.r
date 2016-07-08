@@ -251,3 +251,10 @@ ftv[1] < ftv[2]                          # works when they are ordered
 factor.temperature.vector <- factor(temperature.vector, order = TRUE) # alphabetical levels
 levels(factor.temperature.vector) <- factor(temperature.vector,order=T) # order of appearance
 
+## string
+a <- "Alma"
+typeof(a)                               # "character"
+class(a)                                # "character"
+
+nchar(a)                                # string length (4)
+length(a)                               # vector length (1)
