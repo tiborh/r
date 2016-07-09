@@ -26,6 +26,7 @@ means <- atmos %>%
   ungroup()
 ```
 
+Ozone
 
 ## Data
 
@@ -93,7 +94,7 @@ This yields the following coefficients and model lines.
 lm(ozone ~ temp + locale + temp:locale, data = means)
 ```
 
----
+***
 
 ```{r ref.label='lm_ozone_temp', echo=F}
 ```

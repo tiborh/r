@@ -57,16 +57,16 @@ Is the relationship between ozone and temperature useful for understanding fluct
 <nav class="ggvis-control"> <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
-Renderer: <a id="plot_id540688388_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id540688388" data-renderer="svg">SVG</a> | <a id="plot_id540688388_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id540688388" data-renderer="canvas">Canvas</a>
+Renderer: <a id="plot_id480436822_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id480436822" data-renderer="svg">SVG</a> | <a id="plot_id480436822_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id480436822" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id540688388_download" class="ggvis-download" data-plot-id="plot_id540688388">Download</a>
+<a id="plot_id480436822_download" class="ggvis-download" data-plot-id="plot_id480436822">Download</a>
 </li>
 </ul>
 </nav>
 
 <script type="text/javascript">
-var plot_id540688388_spec = {
+var plot_id480436822_spec = {
   "data": [
     {
       "name": ".0",
@@ -187,7 +187,7 @@ var plot_id540688388_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id540688388").parseSpec(plot_id540688388_spec);
+ggvis.getPlot("plot_id480436822").parseSpec(plot_id480436822_spec);
 </script>
 <!--/html_preserve-->
 Environmental Conditions
@@ -242,16 +242,16 @@ Temperature vs Ozone Level by Area
 <nav class="ggvis-control"> <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
-Renderer: <a id="plot_id179859002_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id179859002" data-renderer="svg">SVG</a> | <a id="plot_id179859002_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id179859002" data-renderer="canvas">Canvas</a>
+Renderer: <a id="plot_id714852748_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id714852748" data-renderer="svg">SVG</a> | <a id="plot_id714852748_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id714852748" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id179859002_download" class="ggvis-download" data-plot-id="plot_id179859002">Download</a>
+<a id="plot_id714852748_download" class="ggvis-download" data-plot-id="plot_id714852748">Download</a>
 </li>
 </ul>
 </nav>
 
 <script type="text/javascript">
-var plot_id179859002_spec = {
+var plot_id714852748_spec = {
   "data": [
     {
       "name": ".0_flat",
@@ -495,7 +495,7 @@ var plot_id179859002_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id179859002").parseSpec(plot_id179859002_spec);
+ggvis.getPlot("plot_id714852748").parseSpec(plot_id714852748_spec);
 </script>
 <!--/html_preserve-->
 Diagnostics
