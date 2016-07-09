@@ -1,19 +1,19 @@
 ---
 title: "Introduction to R Markdown"
-author: "Tiberius"
-date: "9 July 2016"
+author: "``r Sys.info()[[7]]``"
+date: "``r Sys.Date()``"
 output: html_document
 ---
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-Using the **rmarkdown** package (*pandoc* version 1.12.3 or higher is required), the rendering command is
+Using the **rmarkdown** package (`pandoc` version 1.12.3 or higher is required), the rendering command is
 
 ```{r, eval=F}
 rmarkdown::render("your rmd file")
 ```
 
-The default is HTML output (because *output* has been specified as such in the heading of the current document). If you would like a markdown (.md) or github (to include graphics, with preview in html) document, add an argument:
+The default is HTML output (because `output` has been specified as such in the heading of the current document). If you would like a markdown (.md) or github (to include graphics, with preview in html) document, add an argument:
 
 ```{r, eval=F}
 rmarkdown::render("your rmd file", md_document())
@@ -22,7 +22,7 @@ rmarkdown::render("your rmd file", github_document())
 
 ---
 
-The same way, PDF output (*pdflatex* is needed, that is *texlive-base*, *texlive-latex-base*, *texlive-latex-extra*, and *texlive-fonts-recommended*):
+The same way, PDF output (`pdflatex` is needed, that is `texlive-base`, `texlive-latex-base`, `texlive-latex-extra`, and `texlive-fonts-recommended`):
 
 ```{r, eval=F}
 rmarkdown::render("your rmd file", pdf_document())
@@ -35,7 +35,7 @@ rmarkdown::render("your rmd file", odt_document())
 rmarkdown::render("your rmd file", word_document())
 ```
 
-or *beamer* (PDF) or *slidy* (HTML) presentation:
+or `beamer` (PDF) or `slidy` (HTML) presentation:
 
 ```{r, eval=F}
 rmarkdown::render("your rmd file", beamer_presentation())
@@ -59,3 +59,86 @@ plot(mpg~hp, data=mtcars, main="Mileage per Horsepower")
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Session Information
+
+```{r}
+sessionInfo()
+```
+
+## Supported Languages
+
+```{r}
+library(knitr)
+names(knitr::knit_engines$get())
+```
+
+### Some Perl
+
+```{r, engine="perl", eval=F}
+package TS v0.0.1 {
+    sub ts {
+        my @art = localtime(time);
+        return sprintf("%4d%02d%02d_%02d%02d%02d",
+                       $art[5]+1900, # year
+                       ++$art[4],    # month
+                       $art[3],      # day
+                       $art[2],      # hour
+                       $art[1],      # minute
+                       $art[0]);     # second
+    }
+}
+1;
+```
+
+### Some C
+
+```{r, engine="c", eval=F}
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <time.h>
+#include <unistd.h>
+#include <stdbool.h>
+
+time_t start, end;
+
+void signal_callback_handler(int signum)
+{
+   printf("Caught signal %d\n",signum);
+   printf("end: %ld\n",(long)end);
+   double time_difference = difftime(end,start);
+   printf("%lfs has passed.\n",time_difference);
+   exit(signum);
+}
+
+
+int main(int argc, char** argv)
+{
+  signal(SIGINT, signal_callback_handler);
+  bool ticktack = true;
+  start = end = time(NULL);
+  printf("start: %ld\n",(long)start);
+  //long long counter = 0;
+  while(1)
+    {
+      if (ticktack)
+	{
+	  puts("tick");
+	  ticktack = false;
+	}
+      else
+	{
+	  puts("tack");
+	  ticktack = true;
+	}
+      sleep(1);
+      end = time(NULL);
+      //counter++;
+    }
+  //printf("%lld loop cyles for one clock tick\n",counter);
+
+  return 0;
+}
+
+```
