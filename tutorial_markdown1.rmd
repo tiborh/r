@@ -1,0 +1,60 @@
+---
+title: "Introduction to R Markdown"
+author: "Tiberius"
+date: "9 July 2016"
+output: html_document
+---
+
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+Using the **rmarkdown** package (*pandoc* version 1.12.3 or higher is required), the rendering command is
+
+```{r, eval=F}
+rmarkdown::render("your rmd file")
+```
+
+The default is HTML output (because *output* has been specified as such in the heading of the current document). If you would like a markdown (.md) document, add an argument:
+
+```{r, eval=F}
+rmarkdown::render("your rmd file", md_document())
+```
+
+---
+
+The same way, PDF output (*pdflatex* is needed, that is *texlive-base*, *texlive-latex-base*, *texlive-latex-extra*, and *texlive-fonts-recommended*):
+
+```{r, eval=F}
+rmarkdown::render("your rmd file", pdf_document())
+```
+
+or OpenOffice or Word document:
+
+```{r, eval=F}
+rmarkdown::render("your rmd file", odt_document())
+rmarkdown::render("your rmd file", word_document())
+```
+
+or *beamer* (PDF) or *slidy* (HTML) presentation:
+
+```{r, eval=F}
+rmarkdown::render("your rmd file", beamer_presentation())
+rmarkdown::render("your rmd file", slidy_presentation())
+```
+
+---
+
+When the document is generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(mtcars)
+```
+
+---
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(mpg~hp, data=mtcars, main="Mileage per Horsepower")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
