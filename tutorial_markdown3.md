@@ -16,6 +16,9 @@ Some of the variables in the `atmos` data set are:
 
 -   **ozone** - The mean monthly abundance of atmospheric ozone (measured in Dobson units (*DU*))
 
+Conversion
+----------
+
 You can convert the temperature unit from Kelvin to Celsius with the formula
 
 \[ celsius = kelvin - 273.15 \]
@@ -54,16 +57,16 @@ Is the relationship between ozone and temperature useful for understanding fluct
 <nav class="ggvis-control"> <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
-Renderer: <a id="plot_id261208584_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id261208584" data-renderer="svg">SVG</a> | <a id="plot_id261208584_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id261208584" data-renderer="canvas">Canvas</a>
+Renderer: <a id="plot_id540688388_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id540688388" data-renderer="svg">SVG</a> | <a id="plot_id540688388_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id540688388" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id261208584_download" class="ggvis-download" data-plot-id="plot_id261208584">Download</a>
+<a id="plot_id540688388_download" class="ggvis-download" data-plot-id="plot_id540688388">Download</a>
 </li>
 </ul>
 </nav>
 
 <script type="text/javascript">
-var plot_id261208584_spec = {
+var plot_id540688388_spec = {
   "data": [
     {
       "name": ".0",
@@ -184,9 +187,12 @@ var plot_id261208584_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id261208584").parseSpec(plot_id261208584_spec);
+ggvis.getPlot("plot_id540688388").parseSpec(plot_id540688388_spec);
 </script>
 <!--/html_preserve-->
+Environmental Conditions
+------------------------
+
 We suspect that group level effects are caused by environmental conditions that vary by locale. To test this idea, we sort each data point into one of four geographic regions:
 
 ``` r
@@ -196,17 +202,21 @@ means$locale[means$long > -80 & means$lat < 10] <- "south america"
 means$locale[means$long > -80 & means$lat > 10] <- "north atlantic"
 ```
 
-### Model
+Model
+-----
 
 We suggest that ozone is highly correlated with temperature, but that a different relationship exists for each geographic region. We capture this relationship with a second order linear model of the form
 
-\[ ozone = \alpha + \beta_{1} temperature + \sum_{locales} \beta_{i} locale_{i} + \sum_{locales} \beta_{j} interaction_{j} + \epsilon\]
+\[ ozone = \alpha + \beta_{1} temperature + \sum_{locales} \beta_{i} locale_{i} + \\
+   \sum_{locales} \beta_{j} interaction_{j} + \epsilon\]
 
 This yields the following coefficients and model lines.
 
 ``` r
 lm(ozone ~ temp + locale + temp:locale, data = means)
 ```
+
+------------------------------------------------------------------------
 
     ## 
     ## Call:
@@ -222,6 +232,9 @@ lm(ozone ~ temp + locale + temp:locale, data = means)
     ##  temp:localesouth america   temp:localesouth pacific  
     ##                    2.0587                     0.1126
 
+Temperature vs Ozone Level by Area
+----------------------------------
+
     ## Guessing formula = ozone ~ temp
 
 <!--html_preserve-->
@@ -229,16 +242,16 @@ lm(ozone ~ temp + locale + temp:locale, data = means)
 <nav class="ggvis-control"> <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
-Renderer: <a id="plot_id335004571_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id335004571" data-renderer="svg">SVG</a> | <a id="plot_id335004571_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id335004571" data-renderer="canvas">Canvas</a>
+Renderer: <a id="plot_id179859002_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id179859002" data-renderer="svg">SVG</a> | <a id="plot_id179859002_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id179859002" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id335004571_download" class="ggvis-download" data-plot-id="plot_id335004571">Download</a>
+<a id="plot_id179859002_download" class="ggvis-download" data-plot-id="plot_id179859002">Download</a>
 </li>
 </ul>
 </nav>
 
 <script type="text/javascript">
-var plot_id335004571_spec = {
+var plot_id179859002_spec = {
   "data": [
     {
       "name": ".0_flat",
@@ -482,10 +495,11 @@ var plot_id335004571_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_id335004571").parseSpec(plot_id335004571_spec);
+ggvis.getPlot("plot_id179859002").parseSpec(plot_id179859002_spec);
 </script>
 <!--/html_preserve-->
-### Diagnostics
+Diagnostics
+-----------
 
 An anova test suggests that both locale and the interaction effect of locale and temperature are useful for predicting ozone (i.e., the p-value that compares the full model to the reduced models is statistically significant).
 
@@ -496,6 +510,8 @@ mod3 <- lm(ozone ~ temp + locale + temp:locale, data = means)
 
 anova(mod, mod2, mod3)
 ```
+
+------------------------------------------------------------------------
 
     ## Analysis of Variance Table
     ## 

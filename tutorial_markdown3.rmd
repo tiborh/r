@@ -2,7 +2,7 @@
 title: "Introduction to R Markdown 3"
 author: "``r Sys.info()[[7]]``"
 date: "``r Sys.Date()``"
-output: html_document
+output: ioslides_presentation
 always_allow_html: yes
 ---
 
@@ -39,6 +39,8 @@ Some of the variables in the `atmos` data set are:
 
 * **ozone** - The mean monthly abundance of atmospheric ozone (measured in Dobson units (*DU*))
 
+## Conversion
+
 You can convert the temperature unit from Kelvin to Celsius with the formula
 
 $$ celsius = kelvin - 273.15 $$
@@ -66,6 +68,8 @@ means %>%
   layer_points() 
 ```
 
+## Environmental Conditions
+
 We suspect that group level effects are caused by environmental conditions that vary by locale. To test this idea, we sort each data point into one of four geographic regions:
   
 ```{r}
@@ -75,17 +79,26 @@ means$locale[means$long > -80 & means$lat < 10] <- "south america"
 means$locale[means$long > -80 & means$lat > 10] <- "north atlantic"
 ```
 
-### Model
+## Model
 
 We suggest that ozone is highly correlated with temperature, but that a different relationship exists for each geographic region. We capture this relationship with a second order linear model of the form
 
-$$ ozone = \alpha + \beta_{1} temperature + \sum_{locales} \beta_{i} locale_{i} + \sum_{locales} \beta_{j} interaction_{j} + \epsilon$$
+$$ ozone = \alpha + \beta_{1} temperature + \sum_{locales} \beta_{i} locale_{i} + \\
+   \sum_{locales} \beta_{j} interaction_{j} + \epsilon$$
+
 
 This yields the following coefficients and model lines.
 
-```{r}
+```{r lm_ozone_temp, results='hide'}
 lm(ozone ~ temp + locale + temp:locale, data = means)
 ```
+
+---
+
+```{r ref.label='lm_ozone_temp', echo=F}
+```
+
+## Temperature vs Ozone Level by Area
 
 ```{r fig.height = 4, fig.width = 5, echo=F}
 means %>% 
@@ -97,14 +110,19 @@ means %>%
   scale_nominal("stroke", range = c("darkorange", "darkred", "darkgreen", "darkblue"))
 ```
 
-### Diagnostics
+## Diagnostics
 
 An anova test suggests that both locale and the interaction effect of locale and temperature are useful for predicting ozone (i.e., the p-value that compares the full model to the reduced models is statistically significant).
 
-```{r}
+```{r diag, results='hide'}
 mod <- lm(ozone ~ temp, data = means)
 mod2 <- lm(ozone ~ temp + locale, data = means)
 mod3 <- lm(ozone ~ temp + locale + temp:locale, data = means)
 
 anova(mod, mod2, mod3)
+```
+
+---
+
+```{r ref.label='diag', echo=F}
 ```
