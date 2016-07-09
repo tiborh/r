@@ -13,10 +13,11 @@ Using the **rmarkdown** package (*pandoc* version 1.12.3 or higher is required),
 rmarkdown::render("your rmd file")
 ```
 
-The default is HTML output (because *output* has been specified as such in the heading of the current document). If you would like a markdown (.md) document, add an argument:
+The default is HTML output (because *output* has been specified as such in the heading of the current document). If you would like a markdown (.md) or github (to include graphics, with preview in html) document, add an argument:
 
 ```{r, eval=F}
 rmarkdown::render("your rmd file", md_document())
+rmarkdown::render("your rmd file", github_document())
 ```
 
 ---

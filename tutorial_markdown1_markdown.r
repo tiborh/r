@@ -5,6 +5,7 @@ rmarkdown::render("tutorial_markdown1.rmd")
 #detach("package:rmarkdown",unload=T)
 
 rmarkdown::render("tutorial_markdown1.rmd", md_document())
+rmarkdown::render("tutorial_markdown1.rmd", github_document())
 rmarkdown::render("tutorial_markdown1.rmd", pdf_document())
 rmarkdown::render("tutorial_markdown1.rmd", word_document())
 rmarkdown::render("tutorial_markdown1.rmd", odt_document())
