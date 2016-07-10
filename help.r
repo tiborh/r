@@ -2,6 +2,9 @@
 
 ## the views of buttom right window
 
+## for starters (opens up in browser):
+help.start()
+
 ## accessing help file
 ?rnorm
 ## same as:
@@ -9,6 +12,7 @@ help(rnorm)
 
 ## search help files
 help.search("rnorm")
+RSiteSearch("stats")
 
 ##for the following two, the response should come through Console
 
@@ -31,3 +35,18 @@ example(min)
 
 ## check the search list:
 search()                                # a list of loaded envs
+
+## functions with "plot" in their names:
+apropos("plot", mode="function")
+
+## get the functions of a library:
+library(help = "stats")
+
+## datasets available:
+data()
+
+## available vignettes:
+vignette()
+
+## vignette open:
+vignette("intro")                       # The curl package: a modern R interface to libcurl
