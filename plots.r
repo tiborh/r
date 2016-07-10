@@ -3,7 +3,7 @@ x <- seq(0,2*pi,0.01)
 y <- sin(x)
 z <- cos(x)
 a <- tan(x)
-#plot(y,main="sin(x)")
+##plot(y,main="sin(x)")
 plot(x,y,main="sine, cosine, and tangent",asp=c(1,2))
 points(x,z,col=c(2))
 points(x,a,col=c(4))
@@ -62,3 +62,9 @@ library(ggplot2)
 qplot(x,y)
 qplot(x,y,color=tf)                     # introducing groups
 help(qplot)
+
+
+## ggvis test
+if (!require(ggvis)) install.packages("ggvis")
+library(ggvis)
+ggvis(mtcars, ~wt, ~hp)
