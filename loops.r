@@ -40,17 +40,17 @@ for (i in 1:length(a))
 
 b <- "Hello world!"
 
-for (i in nchar(a):1)
-    cat(substr(a,i,i))
+for (i in nchar(b):1)
+    cat(substr(b,i,i))
 
 
 ### Looping through a Matrix
 
 c <- matrix(1:12,nrow=3)
 
-for(j in 1:nrow(a)) {
-    for(i in 1:ncol(a))
-        cat(a[j,i],"\t")
+for(j in 1:nrow(c)) {
+    for(i in 1:ncol(c))
+        cat(c[j,i],"\t")
     cat("\n")
 }
 
