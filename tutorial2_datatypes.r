@@ -4,6 +4,13 @@ print(a)                            # [1] 3 5 7 9
 names(a) = c("一","二","三","四")   # names to data
 print(a)                            # 一 二 三 四
                                         #  3  5  7  9
+## empty vector:
+v1 <- vector(mode="integer",length=10)
+## filling it up
+v1 = 1:10
+typeof(v1)
+
+
 
 a[1]                                # first element
 a[0]                                # type of the variable
