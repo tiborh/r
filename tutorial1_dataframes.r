@@ -74,7 +74,7 @@ subset(days,weekend)                    # weekend
 subset(days,!weekend)                   # weekdays
 
 order(days)                             # not much meaning
-order(days$day.num)                     # not hear either
+order(days$day.num)                     # not here either
 order(days$days.en)                     # these two correspond to each other
 sort(days$days.en)
 
