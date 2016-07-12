@@ -9,6 +9,8 @@ help.start()
 ?rnorm
 ## same as:
 help(rnorm)
+help(gdata)                             # package can also be used, if available
+package?gdata                           # same
 
 ## search help files
 help.search("rnorm")
@@ -32,15 +34,19 @@ str(apply)
 
 ## to see only the examples (plots are drawn)
 example(min)
+demo()                            # list available demos
+demo(graphics)                    # hard to find where it is available
 
 ## check the search list:
-search()                                # a list of loaded envs
+search()                                # a list of loaded packages and env's
 
 ## functions with "plot" in their names:
 apropos("plot", mode="function")
 
 ## get the functions of a library:
 library(help = "stats")
+## alternatively:
+ls(package:xlsx)
 
 ## datasets available:
 data()

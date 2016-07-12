@@ -6,6 +6,14 @@ sum(rnorm(5))
 mean(rnorm(10))
 sd(rnorm(10))
 
+## serial paste:
+paste0("year_", 1967:1974)
+
+## min max index
+v1 <- sample(100,10)
+v1[which.min(v1)]
+v1[which.max(v1)]
+
 
 ## seq and rep
 
@@ -48,7 +56,7 @@ append(v,w)                             # same as previous in a fancier way
 ## revert
 rev(v)                                  # [1] 5 4 3 2 1
 ## string revert also in common.r:
-paste0(rev(strsplit("alpha",split="")[[1]]),collapse="")
+(rev(strsplit("alpha",split="")[[1]]),collapse="")
 
 ## which
 
@@ -56,6 +64,16 @@ x <- c( 1, 2, NA, 3, NA)
 y <- c(NA, 3, NA, 3,  4)
 
 which(is.na(x) & is.na(y))              # find where both are NA
+
+## na.omit
+na.omit(x)
+class(na.omit(y))
+
+## match
+
+v1 <- c("a","b","c")
+"a" %in% v1                             # T
+"d" %in% v1                             # F
 
 ## regex functions
 
@@ -164,3 +182,5 @@ stopifnot(is.character(x))
 ## which is short for:
 if (!is.character(x))
     stop("`x` should be a character vector", call. = F)
+
+?quantile

@@ -116,6 +116,15 @@ mtcars %>%
   map(coef) %>% 
   map_dbl("wt")
 
+## getting the first row:
+map_dbl(mtcars,1)
+
+## breaking up
+split(mtcars,mtcars$cyl)
+map(split(mtcars,mtcars$cyl),~ lm(mpg ~ wt, data = .))
+map(map(split(mtcars,mtcars$cyl),~ lm(mpg ~ wt, data = .)),coef)
+map_dbl(map(map(split(mtcars,mtcars$cyl),~ lm(mpg ~ wt, data = .)),coef),"wt")
+
 ## safely(): to go around errors and have the explanation what should cause an error:
 map(planes,safely(mean),na.rm=T)        # not very helpful, only for diag pruposes
 ## much better:
