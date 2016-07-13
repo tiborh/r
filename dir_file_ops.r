@@ -2,6 +2,8 @@
 dir()
 ## list only r files:
 list.files()
+## list files in current directory:
+list.files(".")
 
 ## pwd:
 getwd()
