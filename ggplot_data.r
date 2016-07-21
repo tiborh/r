@@ -90,11 +90,11 @@ ggplot(iris.wide,aes(Length,Width,shape=Part,col=Species)) + geom_point(size=3,a
 
 ## a simpler preparation of iris.wide:
 iris$rowID <- 1:nrow(iris)              # to avoid duplicate rows error
-iris <- iris[-6]
 iris.wide <- iris %>%
     gather(Measure,Value, -c(Species,rowID)) %>%
     separate(Measure,c("Part","Measure"),sep="\\.") %>%
     spread(Measure,Value)
+iris <- iris[-6]
 
 ## for iris.wide2:
 iris.setosa <- data.frame(iris.wide[iris.wide$Species=="setosa",])
@@ -152,5 +152,5 @@ str(iris.tidy)
 
 ## another depiction:
 ggplot(iris.wide, aes(x = Length, y = Width, col = Part)) +
-  geom_jitter() +
-  facet_grid(. ~ Species)
+    geom_jitter() +
+    facet_grid(. ~ Species)               # each species in separate plot
