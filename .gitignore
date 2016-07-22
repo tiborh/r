@@ -3,3 +3,7 @@
 \#*\#
 .\#*
 img/*
+.Rhistory
+password.saved
+rawpass
+
