@@ -4,7 +4,9 @@ library(RPostgreSQL)
 drv <- dbDriver("PostgreSQL")
 
 ## Open a connection
-con <- dbConnect(drv, user="tibor", host="localhost", dbname="testdb")
+con <- dbConnect(drv, user="tibor", dbname="testdb")
+print(con)                              # <PostgreSQLConnection>
+dbListTables(con)
 
 ## Submits a statement
 rs <- dbSendQuery(con, "select * from weather")
@@ -12,8 +14,12 @@ rs <- dbSendQuery(con, "select * from weather")
 ## fetch all elements from the result set
 weatherTable <- fetch(rs,n=-1)
 
+str(weatherTable)
+
 ## Submit and execute the query
 citiesTable <- dbGetQuery(con, "select * from cities")
+
+str(citiesTable)
 
 ## Closes the connection
 dbDisconnect(con)
