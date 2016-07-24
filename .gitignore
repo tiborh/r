@@ -4,5 +4,8 @@
 .\#*
 img/*
 .Rhistory
+password.saved
+rawpass
 *.log
 *.html
+
