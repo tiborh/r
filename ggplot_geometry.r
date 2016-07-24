@@ -49,6 +49,9 @@ iris.root + geom_jitter(shape = 1)      # using circles
 iris.root + geom_jitter(alpha = 0.7, shape = 1) # both
 iris.root + geom_jitter(alpha = 0.7, shape = 13) # another shape
 
+## jitter and scale:
+iris.root + geom_jitter() + scale_colour_brewer(palette = "Dark2")
+
 ## shape, size, and colour could be a great help with large data sets
 
 ggplot(diamonds, aes(carat, price)) +
