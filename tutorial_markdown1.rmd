@@ -66,12 +66,16 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 sessionInfo()
 ```
 
+---
+
 ## Supported Languages
 
 ```{r}
 library(knitr)
 names(knitr::knit_engines$get())
 ```
+
+---
 
 ### Some Perl
 
@@ -90,6 +94,8 @@ package TS v0.0.1 {
 }
 1;
 ```
+
+---
 
 ### Some C
 

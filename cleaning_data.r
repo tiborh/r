@@ -44,6 +44,9 @@ legend("topright",legend=price.cats,pch=price.cats,col=price.cats+1,title="Price
 library(tidyr)
 ls(package:tidyr)
 
+############
+## gather ##
+############
 ## cleaning up "wide data", that is, one variable in several columns
 messy.df <- data.frame(col=c("X","Y"),A=c(1,4),B=c(2,5),C=c(3,6))
 print(messy.df)
@@ -54,12 +57,18 @@ print(clean.df)
 ## alternatively
 gather(messy.df,keys,vals,c(A,B,C))
 
+############
+## spread ##
+############
 ## cleaning up "long data" by spreading to several cols
 messy.df <- clean.df
 print(messy.df)
 clean.df <- spread(messy.df, keys, vals)
 print(clean.df)
 
+##############
+## separate ##
+##############
 ## separating one col to two when two pieces of info is contained in it
 
 dir("data")
@@ -75,8 +84,10 @@ for (colnum in 8:13)
 str(states)
 names(states)
 
+###########
+## unite ##
+###########
 ## unite would do the opposite:
-
 years <- data.frame(ids=letters[1:12],years=2001:2012,months=1:12,stringsAsFactors=F)
 str(years)
 unite(years,year.month,years,months)    # default is underscore

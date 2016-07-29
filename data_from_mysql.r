@@ -7,7 +7,6 @@ result <- dbGetQuery(ucscDb, "show databases;")
 dbDisconnect(ucscDb)
 result
 
-
 con <- dbConnect(RMySQL::MySQL(),
                  dbname="company",
                  host="courses.csrrinzqubik.us-east-1.rds.amazonaws.com",
