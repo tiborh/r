@@ -12,11 +12,13 @@ mean(xx)                                # [1] 0.09040591
 mean(xx) + (sd(xx) * c(-1,1))           # [1] -0.822410  1.003222
 
 library(Hmisc)
+?smean.sdl
 smean.sdl(xx, mult = 1)
 ##        Mean       Lower       Upper 
 ##  0.09040591 -0.82240997  1.00322179 
 
 ## ggplot:
+?mean_sdl                               # derivative of smean.sdl
 mean_sdl(xx, mult = 1)
 ##            y     ymin     ymax
 ## 1 0.09040591 -0.82241 1.003222
