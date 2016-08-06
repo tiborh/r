@@ -1,11 +1,6 @@
 library(ggplot2); library(tidyr)
 ## iris.wide
-iris$rowID <- 1:nrow(iris)              # to avoid duplicate rows error
-iris.wide <- iris %>%
-    gather(Measure,Value, -c(Species,rowID)) %>%
-    separate(Measure,c("Part","Measure"),sep="\\.") %>%
-    spread(Measure,Value)
-iris <- iris[-6]
+source("iris_wide.r")
 
 p <- ggplot(iris.wide, aes(Length, Width, col = Part)) +
     geom_point(position = position_jitter(), alpha = 0.7) +
@@ -72,3 +67,18 @@ m1 + facet_grid(. ~ vore)
 
 # Specify scale and space arguments to free up rows
 m1 + facet_grid(vore ~ ., scale = "free_y", space = "free_y")
+
+
+## facet_wrap can help move them along more freely:
+
+ggplot(iris.wide, aes(Length,Width,col = Part)) +
+    geom_jitter(alpha=0.5) +
+    geom_point() + facet_wrap(~ Species, scales="free", nrow=2)
+
+ggplot(iris.wide, aes(Length,Width,col = Part)) +
+    geom_jitter(alpha=0.5) +
+    geom_point() + facet_wrap(~ Species, scales="free_y", nrow=3)
+
+ggplot(iris.wide, aes(Length,Width,col = Part)) +
+    geom_jitter(alpha=0.5) +
+    geom_point() + facet_wrap(~ Species, scales="free_x")
