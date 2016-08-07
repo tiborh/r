@@ -9,3 +9,11 @@ iris <- iris[-6]
 iris.tidy <- iris %>%
     gather(key, Value, -Species) %>%
     separate(key,c("Part","Measure"), sep="\\.")
+
+library(gnumeric)
+gfp <- file.path("data","mamsleep.gnumeric")
+read.gnumeric.sheet.info(gfp)
+gsl <- read.gnumeric.sheets(gfp,head=T)
+#str(gsl)
+mamsleep <- as.data.frame(gsl[[1]])
+#str(mamsleep)
