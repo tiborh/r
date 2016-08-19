@@ -1,3 +1,4 @@
+if(!require(XLConnect)) install.packages("XLConnect")
 library(XLConnect)
 
 named.sheet <- function() {
@@ -47,5 +48,30 @@ image.sheet <- function() {
     saveWorkbook(wb)
 }
 
+tutor1 <- function() {
+    fn = file.path("data","tutor1.xlsx")
+
+    ## new workbook
+    wb <- loadWorkbook(fn, create=T)
+    ## str(wb)
+
+    sn1 <- "初"
+    
+    ## new sheet
+    createSheet (wb, sn1)
+
+    ## write sheet
+    writeWorksheet (wb, mtcars, sn1, startRow=1, startCol=1, header=T)
+
+    ## save workbook
+    saveWorkbook(wb)
+}
+
+## edit(file = system.file("XLConnect.R", package = "XLConnect")) # Alt-x server-start is needed
+vignette("XLConnect")
+
+
 named.sheet()
 image.sheet()
+
+tutor1()
