@@ -51,6 +51,21 @@ regexpr("thing",b)
 ## attr(,"useBytes")
 ## [1] TRUE
 
+regmatches(b,regexpr("thing",b))
+## [1] "thing" "thing" "thing" "thing" "thing" "thing" "thing" "thing"
+
+regmatches(b,regexpr("thing\\w",b))
+## [1] "things" "thingy"
+
+regmatches(b,regexpr("\\wthing",b))
+## [1] "ething" "ything" "othing"
+
+regmatches(b,regexpr("[\\w]+thing",b))
+## character(0)
+
+regmatches(b,regexpr("[\\w]+thing",b,perl=T))
+## [1] "something" "anything"  "nothing"
+
 gregexpr("thing",b)
 ## [[1]]
 ## [1] 5
@@ -121,3 +136,34 @@ gregexpr("thing",b)
 ## [1] -1
 ## attr(,"useBytes")
 ## [1] TRUE
+
+regmatches(b,gregexpr("thing",b))
+## [[1]]
+## [1] "thing"
+
+## [[2]]
+## [1] "thing"
+
+## [[3]]
+## [1] "thing"
+
+## [[4]]
+## [1] "thing"
+
+## [[5]]
+## [1] "thing"
+
+## [[6]]
+## [1] "thing"
+
+## [[7]]
+## [1] "thing"
+
+## [[8]]
+## [1] "thing"
+
+## [[9]]
+## character(0)
+
+## [[10]]
+## character(0)
