@@ -1,0 +1,44 @@
+Sample Presentation
+========================================================
+author: `r Sys.info()[[7]]` 
+date: `r Sys.Date()`
+transition: rotate
+transition-speed: slow
+
+Section
+=======
+type:section
+
+First Slide
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Sub-Section
+=======
+type:sub-section
+
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Prompt
+=========
+type:prompt
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+library(ggplot2)
+ggplot(mtcars,aes(mpg,disp,colour=factor(cyl))) + geom_point()
+```
