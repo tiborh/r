@@ -1,0 +1,29 @@
+---
+title: "optparse test"
+author: "``r Sys.getenv('USER')``"
+date: "`r Sys.Date()`"
+output: github_document
+always_allow_html: yes
+---
+
+# Look into ls()
+
+`r ls()`
+
+## Structure of <tt>print</tt>
+
+```{r echo=F}
+print(str(option.print))
+```
+
+# Printing Commandline Argument
+
+The value of the <tt>print</tt> argument:
+
+> `r opts.parsed$print`
+
+# Printing Help
+
+```{r}
+print_help(opt.parser)
+```
