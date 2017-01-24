@@ -39,9 +39,7 @@ create.other <- function(the.data,THRESHOLD=6,MAXNUM=0) {
                 output.data <- create.other.with.threshold(the.data,the.threshold)
                 break;
             }
-            
         }
     }
-
     return(output.data)
 }
