@@ -1,6 +1,9 @@
 num.of.vals <- 100
 c1 <- as.call(list(rnorm,num.of.vals,m=50))
 c1
+c2 <- call("rnorm",num.of.vals,m=50)
+c2
+eval(c2)
 
 dat <- data.frame(x1 = eval(c1),
                   x2 = eval(c1),
@@ -8,6 +11,7 @@ dat <- data.frame(x1 = eval(c1),
                   x4 = eval(c1),
                   y  = rnorm(num.of.vals))
 str(dat)
+
 m2 <- lm( y ~ log(x1) + x2*x3, data = dat)
 m2
 plot(m2)
