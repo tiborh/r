@@ -27,4 +27,8 @@ environment(as.formula("y ~ x", env = new.env()))
      
 ## Create a formula for a model with a large number of variables:
 xnam <- paste0("x", 1:25)
+
+paste(xnam, collapse= "+")              # x1+x2+...
+paste("y ~ ", paste(xnam, collapse= "+")) # y ~ x1+x2+...
+
 (fmla <- as.formula(paste("y ~ ", paste(xnam, collapse= "+"))))
