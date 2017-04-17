@@ -1,9 +1,22 @@
+#!/usr/bin/env Rscript
+
+args = commandArgs(trailingOnly=T)
+
+if(length(args) < 1)
+    warning("\tNo command line args.")
+
+for (it in args)
+    print(it)
+
 num.of.vals <- 100
 c1 <- as.call(list(rnorm,num.of.vals,m=50))
-c1
+## (function (n, mean = 0, sd = 1) 
+## .Call(C_rnorm, n, mean, sd))(100, m = 50)
 c2 <- call("rnorm",num.of.vals,m=50)
-c2
-eval(c2)
+## rnorm(100, m = 50)
+print(str(eval(c1)))
+print(str(eval(c2)))
+## seemingly, the same results
 
 dat <- data.frame(x1 = eval(c1),
                   x2 = eval(c1),
