@@ -6,7 +6,7 @@ attributes(x)
 x
 
 x <- cbind(a = 1:3, pi = pi) # simple matrix with dimnames
-x
+print(x)
 attributes(x)
 ## $dim
 ## [1] 3 2
@@ -44,11 +44,31 @@ attributes(a)
 ## [1] "data.frame"
 
 attr(a,"row.names") <- c(LETTERS[1:5])
+print(a)
+##   a b
+## A 1 a
+## B 2 b
+## C 3 c
+## D 4 d
+## E 5 e
+
+## attributes(a)
+## $names
+## [1] "a" "b"
 ## $row.names
 ## [1] "A" "B" "C" "D" "E"
+## $class
+## [1] "data.frame"
 
 b <- cbind(a = 1:3, b = 4:6, c = 7:9)
 class(b)                                # matrix
+print(b)
+##      a b c
+## [1,] 1 4 7
+## [2,] 2 5 8
+## [3,] 3 6 9
+
+## the danger of changing attibs:
 attr(b,"class") <- "data.frame"
 class(b)                                # data.frame
 str(b)
@@ -61,3 +81,21 @@ str(b)
 ## Warning message:
 ## In format.data.frame(x, trim = TRUE, drop0trailing = TRUE, ...) :
 ##   corrupt data frame: columns will be truncated or padded with NAs
+print(b)
+## NULL
+## <0 rows> (or 0-length row.names)
+
+attr(b,"class") <- "matrix"
+str(b)                                  # restored, without the warning
+print(b)
+##      a b c
+## [1,] 1 4 7
+## [2,] 2 5 8
+## [3,] 3 6 9
+## attr(,"class")
+## [1] "matrix"
+
+attributes(b) <- NULL
+str(b)
+##  int [1:9] 1 2 3 4 5 6 7 8 9
+
