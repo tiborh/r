@@ -25,6 +25,7 @@ head(wine)
 
 ## using httr
 # Load the httr package
+if(!require(httr)) install.packages("httr")
 library(httr)
 
 # Get the url, save response to resp
