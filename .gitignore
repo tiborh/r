@@ -3,6 +3,7 @@
 \#*\#
 .\#*
 img/*
+out/*
 .Rhistory
 password.saved
 rawpass
