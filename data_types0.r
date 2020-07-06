@@ -3,6 +3,11 @@
 ## frequent data types:
 ## * Vectors c() or vector(mode = "logical", length = 0)
 cat("vectors always give the type of data stored in them as class\n")
+cat("vector(mode=\"integer\",length=10):",vector(mode="integer",length=10),"\n")
+a <- vector(mode="integer",length=10)
+cat("a == ",a,"\n")
+a <- 1:10
+cat("a <- 1:10, a == ",a,"\n")
 ## * Lists list()
 cat(class(list()),"\n")
 ## * Matrices matrix()
