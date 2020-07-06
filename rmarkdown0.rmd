@@ -5,6 +5,11 @@ date: "``r Sys.Date()``"
 output: html_document
 ---
 
+<!-- 
+Source: https://bookdown.org/yihui/rmarkdown/basics.html
+run: rmarkdown0.r to render this file
+-->
+
 ```{r, echo=F, message=F}
 if (!require(pander)) install.packages("pander")
 require(pander)
