@@ -1,5 +1,5 @@
 ---
-title: "Hello R Markdown"
+title: "Some Simple Plots"
 author: "``r Sys.getenv('USER')``"
 date: "``r Sys.Date()``"
 output: html_document
@@ -16,6 +16,9 @@ plot(rbinom(100,10,0.1))
 
 ```{r}
 plot(sort(rbinom(100,10,0.5)))
+```
+```{r}
+plot(sort(rbinom(100,10,0.1)))
 ```
 
 ```{r}
