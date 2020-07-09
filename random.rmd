@@ -1,0 +1,178 @@
+---
+title: "Some Simple Plots"
+author: "``r Sys.getenv('USER')``"
+date: "``r Sys.Date()``"
+output:
+  html_document:
+    toc: true
+    theme: united
+    number_sections: true
+    highlight: tango
+---
+
+# Reproducible Results
+
+## Uninitialised
+
+```{r sample.int.10}
+print(sample.int(10))
+print(sample.int(10))
+```
+
+## Initialised
+
+```{r sample.int.10.init}
+set.seed(5)
+print(sample.int(10))
+set.seed(5)
+print(sample.int(10))
+```
+
+
+# Uniform Distribution
+
+```{r runif100}
+plot(runif(100,1,99))
+```
+
+```{r runif100sorted}
+plot(sort(runif(100,1,99)))
+```
+
+```{r runif1000sorted}
+plot(sort(runif(1000,1,99)))
+```
+
+# Sampling
+
+## Without Putting Back
+
+```{r sample100}
+plot(sample(100))
+```
+
+```{r sample100sorted}
+plot(sort(sample(100)))
+```
+
+### Random Sampling of a Larger Set
+
+#### For Vectors
+
+```{r sampling.larger.vector}
+larger.vect <- rnorm(50)
+vect.sample.of.five <- larger.vect[sample(length(larger.vect),5)]
+print(larger.vect)
+```
+
+The sample: `r vect.sample.of.five`.
+
+#### For Data Sets
+
+```{r sampling.larger.set}
+larger.set <- data.frame(rnums = rnorm(50))
+vect2.sample.of.five <- larger.set[sample(nrow(larger.set),5),]
+print(str(larger.set))
+print(head(larger.set))
+print(tail(larger.set))
+```
+
+The sample: `r vect2.sample.of.five`.
+
+## With Putting Back
+
+```{r sample100.putback}
+plot(sample(100,replace=T))
+```
+
+```{r sample100sorted.putback}
+plot(sort(sample(100,replace=T)))
+```
+
+# runif vs sample
+
+`runif` and `sample` produce similar results but they are not identical:
+
+```{r runif.vs.sample}
+set.seed(5)
+round(runif(10,1,10))
+set.seed(5)
+print(sample.int(10))
+```
+
+```{r sample1000sorted.putback}
+plot(sort(sample(1000,replace=T)))
+```
+
+```{r runif1000sorted.b}
+plot(sort(runif(1000,1,1000)))
+```
+
+# Binomial Distribution
+
+```{r rbinom100_0.5}
+plot(rbinom(100,10,0.5))
+```
+
+```{r rbinom100_0.1}
+plot(rbinom(100,10,0.1))
+```
+
+```{r rbinom100_0.5_sorted}
+plot(sort(rbinom(100,10,0.5)))
+```
+```{r rbinom100_0.1_sorted}
+plot(sort(rbinom(100,10,0.1)))
+```
+
+# Normal Distribution
+
+```{r rnorm1000}
+plot(rnorm(1000))
+```
+
+```{r rnorm1000.sorted}
+plot(sort(rnorm(1000)))
+```
+
+# Density Distribution
+
+```{r rexp1000}
+plot(rexp(1000))
+```
+
+```{r rexp1000.sorted}
+plot(sort(rexp(1000)),pch=".")
+```
+
+# Histograms
+
+```{r hist.rnorm.500.50.10}
+hist(rnorm(500,mean=50,sd=10))
+```
+
+## Multiple
+
+### Histograms
+
+```{r hist.rnorm.500.50.double}
+hist(rnorm(500,mean=50,sd=10),col=rgb(1,0,0,1/4),ylim=c(0,200),breaks=seq(10,90,5))
+hist(rnorm(500,mean=50,sd=5),col=rgb(0,0,1,1/4),add=T)
+```
+
+### Trend Curve on Histogram
+
+```{r hist.rexp.100.1500th.with.curv}
+x=rexp(100, 1/1500)
+hist(x, probability=TRUE, col= gray(.9), main="exponential mean=1500")
+curve(dexp(x, 1/1500), add= T)
+```
+
+# Reference
+
+Main source:
+
+1. [Random Number Generator in R](https://www.educba.com/random-number-generator-in-r/) 
+2. [R Markdown: Basic Syntax](https://www.markdownguide.org/basic-syntax)
+
+Plus lots of internet searches.

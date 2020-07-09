@@ -3,5 +3,5 @@
 if (!require(rmarkdown)) install.packages("rmarkdown")
 require(rmarkdown)
 
-fn <- "rmarkdown1.rmd"
+fn <- "random.rmd"
 rmarkdown::render(fn)
