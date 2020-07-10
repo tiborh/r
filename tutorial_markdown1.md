@@ -1,7 +1,7 @@
 Introduction to R Markdown
 ================
-`tibor`
-`2016-07-09`
+`etibhar`
+`2020-07-10`
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -85,9 +85,13 @@ Session Information
 sessionInfo()
 ```
 
-    ## R version 3.3.1 (2016-06-21)
+    ## R version 4.0.2 (2020-06-22)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 16.04 LTS
+    ## Running under: Ubuntu 16.04.6 LTS
+    ## 
+    ## Matrix products: default
+    ## BLAS:   /usr/local/lib/R/lib/libRblas.so
+    ## LAPACK: /usr/local/lib/R/lib/libRlapack.so
     ## 
     ## locale:
     ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -101,16 +105,14 @@ sessionInfo()
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ## [1] knitr_1.13      ggvis_0.4.2     dplyr_0.5.0     nasaweather_0.1
-    ## [5] rmarkdown_1.0  
+    ## [1] knitr_1.29    rmarkdown_2.3
     ## 
     ## loaded via a namespace (and not attached):
-    ##  [1] Rcpp_0.12.5     digest_0.6.9    assertthat_0.1  mime_0.4       
-    ##  [5] R6_2.1.2        jsonlite_1.0    xtable_1.8-2    DBI_0.4-1      
-    ##  [9] formatR_1.4     magrittr_1.5    evaluate_0.9    stringi_1.1.1  
-    ## [13] lazyeval_0.2.0  tools_3.3.1     stringr_1.0.0   shiny_0.13.2   
-    ## [17] compiler_3.3.1  httpuv_1.3.3    yaml_2.1.13     htmltools_0.3.5
-    ## [21] tibble_1.1
+    ##  [1] compiler_4.0.2  magrittr_1.5    tools_4.0.2     htmltools_0.5.0
+    ##  [5] yaml_2.2.1      stringi_1.4.6   stringr_1.4.0   xfun_0.15      
+    ##  [9] digest_0.6.25   rlang_0.4.6     evaluate_0.14
+
+------------------------------------------------------------------------
 
 Supported Languages
 -------------------
@@ -120,13 +122,15 @@ library(knitr)
 names(knitr::knit_engines$get())
 ```
 
-    ##  [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"   
-    ##  [6] "haskell"   "lein"      "mysql"     "node"      "perl"     
-    ## [11] "psql"      "python"    "Rscript"   "ruby"      "sas"      
-    ## [16] "scala"     "sed"       "sh"        "stata"     "zsh"      
-    ## [21] "highlight" "Rcpp"      "tikz"      "dot"       "c"        
-    ## [26] "fortran"   "asy"       "cat"       "asis"      "stan"     
-    ## [31] "block"     "js"        "css"
+    ##  [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"    "haskell"  
+    ##  [7] "lein"      "mysql"     "node"      "octave"    "perl"      "psql"     
+    ## [13] "Rscript"   "ruby"      "sas"       "scala"     "sed"       "sh"       
+    ## [19] "stata"     "zsh"       "highlight" "Rcpp"      "tikz"      "dot"      
+    ## [25] "c"         "cc"        "fortran"   "fortran95" "asy"       "cat"      
+    ## [31] "asis"      "stan"      "block"     "block2"    "js"        "css"      
+    ## [37] "sql"       "go"        "python"    "julia"     "sass"      "scss"
+
+------------------------------------------------------------------------
 
 ### Some Perl
 
@@ -145,6 +149,8 @@ package TS v0.0.1 {
 }
 1;
 ```
+
+------------------------------------------------------------------------
 
 ### Some C
 

@@ -7,6 +7,8 @@ output:
     toc: true
     theme: united
     number_sections: true
+    fig_caption: true
+    df_print: paged
     highlight: tango
 ---
 
@@ -170,9 +172,7 @@ curve(dexp(x, 1/1500), add= T)
 
 # Reference
 
-Main source:
-
-1. [Random Number Generator in R](https://www.educba.com/random-number-generator-in-r/) 
+1. [Random Number Generator in R](https://www.educba.com/random-number-generator-in-r/) (the primary source to this paper)
 2. [R Markdown: Basic Syntax](https://www.markdownguide.org/basic-syntax)
-
-Plus lots of internet searches.
+3. [R Markdown: The Definitive Gude](https://bookdown.org/yihui/rmarkdown/)
+4. Plus lots of internet searches for bits and pieces

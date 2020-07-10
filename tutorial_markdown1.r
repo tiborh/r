@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 if (!require(rmarkdown)) install.packages("rmarkdown")
 library(rmarkdown)
 fn <- "tutorial_markdown1.rmd"
