@@ -41,14 +41,16 @@ combine.dfs <- function(df1,df2) {
 
 stent30.data <- make.dataframe("https://www.openintro.org/data/csv/","stent30.csv")
 stent30.data$days <- "30"
+control.population <- nrow(stent30.data[stent30.data$group == "control",])
+treatment.population <- nrow(stent30.data[stent30.data$group == "treatment",])
 stent365.data <- make.dataframe("https://www.openintro.org/data/csv/","stent365.csv")
 stent365.data$days <- "365"
 print(str(stent30.data))
 print(str(stent365.data))
 stent30.table <- table(stent30.data)
 stent365.table <- table(stent365.data)
-print(str(stent30.table))
-print(str(stent365.table))
+print(stent30.table)
+print(stent365.table)
 ## plot(stent30.table)
 ## plot(stent365.table)
 stent.combined <- combine.dfs(stent30.data,stent365.data)
@@ -58,6 +60,15 @@ comb.table <- table(stent.combined)
 print(str(comb.table))
 plot(comb.table)
 print(comb.table)
+comb.tbl.df <- as.data.frame(comb.table)
+names(comb.tbl.df)[4] <- "sum"
+## print(comb.tbl.df)
+comb.tbl.df$population = 0
+comb.tbl.df$population[comb.tbl.df$group=="control"] <- control.population
+comb.tbl.df$population[comb.tbl.df$group=="treatment"] <- treatment.population
+comb.tbl.df$ratio = comb.tbl.df$sum / comb.tbl.df$population
+comb.tbl.df$percentage = round(comb.tbl.df$ratio * 100,digits=2)
+print(comb.tbl.df)
 
 require(dplyr)
 
