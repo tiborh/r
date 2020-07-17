@@ -1,21 +1,9 @@
 #!/usr/bin/env Rscript
 
-DATA.DIR <- file.path(".","data")
-if (!dir.exists(DATA.DIR))
-    dir.create(DATA.DIR)
-IMG.DIR <- file.path(".","img")
-if (!dir.exists(IMG.DIR))
-    dir.create(IMG.DIR)
+source("script_env.r")
 
-
-make.dataframe <- function(loc.site,loc.file,data.dir=DATA.DIR) {
-    csv.path <- file.path(data.dir,loc.file)
-    if (file.exists(loc.file))
-        raw.data <- read.csv(csv.path)
-    else {
-        raw.data <- read.csv(paste0(loc.site,loc.file))
-        write.csv(raw.data,file=csv.path)
-    }
+make.dataframe <- function(loc.site,loc.file,force.local=F,data.dir=DATA.DIR) {
+    raw.data <- get.raw.df(loc.site,loc.file,force.local,data.dir)
     dat.len <- nrow(raw.data)
     out.data <- data.frame(group=vector(mode="character",length=dat.len),
                            outcome=vector(mode="character",length=dat.len)
