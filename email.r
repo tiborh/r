@@ -4,7 +4,6 @@ source("script_env.r")
 
 make.dataframe <- function(loc.site,loc.file,force.local=F,data.dir=DATA.DIR) {
     raw.data <- get.raw.df(loc.site,loc.file,force.local,data.dir)
-    
 
     return(raw.data)
 }
@@ -19,6 +18,13 @@ plot(x=factor(as.character(mail50.data$spam)),y=factor(as.character(mail50.data$
 mail.data <- make.dataframe("https://www.openintro.org/data/csv/","email.csv")
 
 plot(x=factor(as.character(mail.data$spam)),y=factor(as.character(mail.data$to_multiple)),xlab="Spam?",ylab="Multiple recipients?")
+
+## correlations:
+## cor(mail.data,use="complete.obs",method="kendall")
+## for this to work, first the factors need to be taken care of
+
+require(polycor)
+## hetcor(mail.data)                       # could not wait to finish
 
 ## to do:
 ## a function that prepares a chart for each variable
