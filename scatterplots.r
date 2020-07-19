@@ -4,8 +4,6 @@
 attach(mtcars)
 plot(wt, mpg, main="Scatterplot Example",
      xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
-
-
 # Add fit lines
 abline(lm(mpg~wt), col="red") # regression line (y~x)
 lines(lowess(wt,mpg), col="blue") # lowess line (x,y)
@@ -13,10 +11,11 @@ lines(lowess(wt,mpg), col="blue") # lowess line (x,y)
 # Enhanced Scatterplot of MPG vs. Weight
 # by Number of Car Cylinders
 require(car)
-## scatterplot(mpg ~ wt | cyl, data=mtcars,
-##    xlab="Weight of Car", ylab="Miles Per Gallon",
-##    main="Enhanced Scatter Plot",
-##    labels=row.names(mtcars))
+scatterplot(mpg ~ wt | cyl, data=mtcars,
+            xlab="Weight of Car", ylab="Miles Per Gallon",
+            main="Enhanced Scatter Plot")
+##   main="Enhanced Scatter Plot",
+##   labels=row.names(mtcars))
 
 ## Error in axis(side = side, at = at, labels = labels, ...) : 
 ##   'labels' is supplied and not 'at'
@@ -31,14 +30,14 @@ pairs(~mpg+disp+drat+wt,data=mtcars,
 
 
 # Scatterplot Matrices from the lattice Package
-## require(lattice)
-## splom(mtcars[c(1,3,5,6)], groups=cyl, data=mtcars,
-##    panel=panel.superpose,
-##    key=list(title="Three Cylinder Options",
-##    columns=3,
-##    points=list(pch=super.sym$pch[1:3],
-##    col=super.sym$col[1:3]),
-##    text=list(c("4 Cylinder","6 Cylinder","8 Cylinder"))))
+require(lattice)
+splom(mtcars[c(1,3,5,6)], groups=cyl, data=mtcars,
+   panel=panel.superpose,
+   key=list(title="Three Cylinder Options",
+   columns=3,
+##   points=list(pch=super.sym$pch[1:3], ## dots from the legend will go missing
+##   col=super.sym$col[1:3]),
+   text=list(c("4 Cylinder","6 Cylinder","8 Cylinder"))))
 
 ## Error in splom.formula(x = ~x, data = <environment>, panel = panel.superpose,  : 
 ##   object 'super.sym' not found
@@ -49,8 +48,8 @@ pairs(~mpg+disp+drat+wt,data=mtcars,
 
 # Scatterplot Matrices from the car Package
 ## require(car)
-## scatterplot.matrix(~mpg+disp+drat+wt|cyl, data=mtcars,
-##    main="Three Cylinder Options")
+scatterplotMatrix(~mpg+disp+drat+wt|cyl, data=mtcars,
+   main="Three Cylinder Options")
 
 ## Error in scatterplot.matrix(~mpg + disp + drat + wt | cyl, data = mtcars,  : 
 ##   could not find function "scatterplot.matrix"
