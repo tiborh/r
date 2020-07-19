@@ -36,8 +36,15 @@ hetcor(x)
 # partial correlations
 ## require(ggm)
 ## ERROR: dependency ‘graph’ is not available for package ‘ggm’
-## data(mydata)
-## pcor(c("a", "b", "x", "y", "z"), var(mydata))
+## resolution:
+## install.packages("BiocManager")
+## BiocManager::install("graph")
+## then:
+## install.packages("ggm")
+require(ggm)
+data(mtcars)
+myvars <- c("mpg","cyl","disp","hp","drat")
+pcor(myvars, var(mtcars[myvars]))
 ## partial corr between a and b controlling for x, y, z
 
 
