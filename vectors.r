@@ -1,5 +1,8 @@
 #!/usr/bin/env Rscript
 
+## main source:
+## https://www.tutorialspoint.com/r/r_vectors.htm
+
 cat("full:\n")
 print(letters)
 

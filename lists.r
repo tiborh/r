@@ -1,5 +1,8 @@
 #!/usr/bin/env Rscript
 
+## main source:
+## https://www.tutorialspoint.com/r/r_lists.htm
+
 a <- list(1,
           "a",
           1:10,

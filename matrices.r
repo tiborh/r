@@ -1,5 +1,8 @@
 #!/usr/bin/env Rscript
 
+## main source:
+## https://www.tutorialspoint.com/r/r_matrices.htm
+
 ## matrix(data, nrow, ncol, byrow, dimnames)
 
 ## Following is the description of the parameters used:
