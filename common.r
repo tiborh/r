@@ -17,6 +17,12 @@ get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
     return(raw.data)
 }
 
+time.stamp <- function() {
+    ts <- gsub(" ","_",Sys.time())
+    ts <- gsub("[-:]","",ts)
+    return(ts)
+}
+
 make.string.v <- function(num,maxStrLen=12) {
     v <- c()
     for (i in 1:num)
@@ -56,3 +62,4 @@ date.generator <- function(num) {
 time.generator <- function(num) {
     return(sort(as.POSIXct(sample(unclass(Sys.time()),num),format="%s",origin="1970-01-01 00:00:00")))
 }
+
