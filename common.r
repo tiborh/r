@@ -18,8 +18,9 @@ get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
 }
 
 stop.if.not.installed <- function(lib.name) {
-    if (!any(grepl(lib.name,installed.packages())))
+    if (!require(lib.name,character.only=T))
         stop("Not installed: ",lib.name)
+    require(lib.name,character.only=T)
 }
 
 time.stamp <- function() {
