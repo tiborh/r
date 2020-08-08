@@ -17,6 +17,11 @@ get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
     return(raw.data)
 }
 
+stop.if.not.installed <- function(lib.name) {
+    if (!any(grepl(lib.name,installed.packages())))
+        stop("Not installed: ",lib.name)
+}
+
 time.stamp <- function() {
     ts <- gsub(" ","_",Sys.time())
     ts <- gsub("[-:]","",ts)
