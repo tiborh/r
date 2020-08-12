@@ -19,6 +19,10 @@ fn <- vector("character")
 fn[1] <- "file.txt"
 fn[2] <- "./file.tar.gz"
 fn[3] <- "/home/user/my_file.ext"
+fn[4] <- "../readme"
+fn[5] <- "~/tilde\ check"
+fn[6] <- file.path("..","file.path_check")
+fn[7] <- file.path("~","another_attempt.tst")
 
 for(f in fn) {
     fn.analyse(f)
