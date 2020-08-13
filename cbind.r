@@ -25,3 +25,6 @@ print(cbind(a[1,],c=sample(LETTERS,3)))
 
 cat("you can get rid off warning with \"row.names=NULL\"\n")
 print(cbind(a[1,],c=sample(LETTERS,3),row.names=NULL))
+
+cat("same logic when the bind is shorter:\n")
+print(cbind(a,c="A"))
