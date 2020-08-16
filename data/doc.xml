@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a>
+  <b x="1" y="abc"/>
+  <c>With some text</c>
+  <d>With text as an explicit node<![CDATA[x <- 1
+ x > 2]]></d>
+  <?R library(XML)?>
+  <!--This is a comment-->
+  <ol>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ol>
+  <fo:block xmlns:fo="http://www.fo.org" id="bob">xyz</fo:block>
+</a>
