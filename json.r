@@ -12,6 +12,7 @@ if(!require(rjson))
     stop("'rjson' is needed.")
 
 process.laureate  <- function(a.laureate) {
+    ## as.data.frame does not work for irregularities
     out.df <- data.frame(id=a.laureate$id,
                          firstname=a.laureate$firstname,
                          surname=NA,
