@@ -17,10 +17,12 @@ get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
     return(raw.data)
 }
 
-stop.if.not.installed <- function(lib.name) {
-    if (!require(lib.name,character.only=T))
-        stop("Not installed: ",lib.name)
-    require(lib.name,character.only=T)
+stop.if.not.installed <- function(lib.names) {
+    for(lib.name in lib.names) {
+        if (!require(lib.name,character.only=T))
+            stop("Not installed: ",lib.name)
+        require(lib.name,character.only=T)
+    }
 }
 
 time.stamp <- function() {
