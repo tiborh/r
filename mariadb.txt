@@ -28,7 +28,12 @@ Consider joining MariaDB's strong and vibrant community:
 https://mariadb.org/get-involved/
 
 connect:
-mysql -u root -p -h localhost
+mysql -u root -p -h localhost (optionally: dbname)
+
+set a password:
+set password for 'root'@'localhost' = password('new_password');
+or on newer ones:
+alter user 'root'@'localhost' identified by 'new_password';
 
 show databases:
 https://mariadb.com/kb/en/show-databases/
