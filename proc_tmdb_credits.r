@@ -1,6 +1,7 @@
 #!/usr/bin/env Rscript
 
 source("common.r")
+source("proc_tmdb_common.r")
 
 stop.if.not.installed(c("rjson"))
 
@@ -42,20 +43,6 @@ create.empty.movie.df <- function() {
            )
 }
 
-proc.tmdb.credits.json <- function(input.json,movie.id,create.empty.df) {
-    out.df <- create.empty.df()
-    if(class(input.json) == "character") {
-        input.list <- fromJSON(input.json)
-        for(li in input.list) {
-            out.df <- rbind(out.df,as.data.frame(li),stringsAsFactors=F)
-        }
-    }
-    if(nrow(out.df) == 0)
-        out.df[1,] = NA
-    out.df$movie_id = movie.id
-    return(out.df)
-}
-
 proc.tmdb.credits.df <- function(input.df) {
     movie.df <- create.empty.movie.df()
     cast.df <- create.empty.cast.df.with.movie.id()
@@ -76,15 +63,6 @@ proc.tmdb.credits.df <- function(input.df) {
     return(list(movie=movie.df,cast=cast.df,crew=crew.df))
 }
 
-proc.tmdb.fn <- function(fn,maxlines=-1) {
-    fp <- file.path(DATA.DIR,fn)
-    if(!file.exists(fp))
-        stop("File does not exist:",fp,"\n")
-    tmdb.data <- read.csv(fp,nrows=maxlines,stringsAsFactor=F)
-    ## print(str(tmdb.credits))
-    return(tmdb.data)
-}
-
 fn1 <- "tmdb_5000_credits.csv"
 credits <- proc.tmdb.fn(fn1)
 ## print(str(credits))
@@ -95,10 +73,7 @@ print(str(credits.list))
 ## save paths
 fn2 <- file.path(DATA.DIR,"tmdb_5000_credits.RData")
 
-save(credits.list,file=fn2)
-cat("processed data from",fn1,"has been saved into",fn2,"\n")
-
-fn3 <- "tmdb_5000_movies.csv"
-movies <- proc.tmdb.fn(fn3)
-print(str(movies))
-cat("to be continued...\n")
+if (!file.exists(fn2)) {
+    save(credits.list,file=fn2)
+    cat("processed data from",fn1,"has been saved into",fn2,"\n")
+}
