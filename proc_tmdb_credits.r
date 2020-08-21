@@ -1,9 +1,6 @@
 #!/usr/bin/env Rscript
 
-source("common.r")
 source("proc_tmdb_common.r")
-
-stop.if.not.installed(c("rjson"))
 
 create.empty.cast.df <- function() {
     return(data.frame(cast_id=numeric(),
@@ -63,8 +60,10 @@ proc.tmdb.credits.df <- function(input.df) {
     return(list(movie=movie.df,cast=cast.df,crew=crew.df))
 }
 
+user.input <- proc.user.input()
+
 fn1 <- "tmdb_5000_credits.csv"
-credits <- proc.tmdb.fn(fn1)
+credits <- proc.tmdb.fn(fn1,user.input$num.lines)
 ## print(str(credits))
 
 credits.list <- proc.tmdb.credits.df(credits)
@@ -73,7 +72,10 @@ print(str(credits.list))
 ## save paths
 fn2 <- file.path(DATA.DIR,"tmdb_5000_credits.RData")
 
-if (!file.exists(fn2)) {
+if (!file.exists(fn2) || user.input$store.res) {
     save(credits.list,file=fn2)
     cat("processed data from",fn1,"has been saved into",fn2,"\n")
+} else {
+    cat("File",fn2,"already exists, so extracted data are not saved.\n")
 }
+
