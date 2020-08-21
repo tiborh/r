@@ -6,6 +6,9 @@
 img/*
 out/*
 .Rhistory
+*.RData
+*.Rdata
+*.rdata
 password.saved
 rawpass
 *.log
