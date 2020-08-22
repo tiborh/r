@@ -35,7 +35,7 @@ create.empty.crew.df.with.movie.id <- function() {
 
 create.empty.movie.df <- function() {
     return(data.frame(movie_id=numeric(),
-                         title=character()
+                      title=character()
                       )
            )
 }
@@ -47,9 +47,9 @@ proc.tmdb.credits.df <- function(input.df) {
     if(class(input.df) == "data.frame") {
         for(i in 1:nrow(input.df)) {
             movie.id <- input.df[i,"movie_id"]
-            tmp.movie.df <- create.empty.movie.df()
-            tmp.movie.df[1,"movie_id"] <- movie.id
-            tmp.movie.df[1,"title"] <- input.df[i,"title"]
+            title <- input.df[i,"title"]
+            tmp.movie.df <- data.frame(movie_id=movie.id,title=title)
+            tmp.movie.df$title <- as.character(tmp.movie.df$title)
             tmp.cast.df <- proc.tmdb.credits.json(input.df[i,"cast"],movie.id,create.empty.cast.df)
             tmp.crew.df <- proc.tmdb.credits.json(input.df[i,"crew"],movie.id,create.empty.crew.df)
             cast.df <- rbind(cast.df,tmp.cast.df)
@@ -64,7 +64,7 @@ user.input <- proc.user.input()
 
 fn1 <- "tmdb_5000_credits.csv"
 credits <- proc.tmdb.fn(fn1,user.input$num.lines)
-## print(str(credits))
+##print(str(credits))
 
 credits.list <- proc.tmdb.credits.df(credits)
 print(str(credits.list))

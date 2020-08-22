@@ -39,7 +39,7 @@ proc.tmdb.credits.json <- function(input.json,movie.id,create.empty.df) {
     if(class(input.json) == "character") {
         input.list <- fromJSON(input.json)
         for(li in input.list) {
-            out.df <- rbind(out.df,as.data.frame(li),stringsAsFactors=F)
+            out.df <- rbind(out.df,as.data.frame(li,stringsAsFactors=F))
         }
     }
     if(nrow(out.df) == 0)
