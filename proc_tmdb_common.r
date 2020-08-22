@@ -1,5 +1,5 @@
 source("common.r")
-stop.if.not.installed(c("rjson"))
+stop.if.not.installed(c("rjson","testit","plyr"))
 
 proc.user.input <- function() {
     if (!require(optparse))
