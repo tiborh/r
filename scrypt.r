@@ -1,23 +1,43 @@
+#!/usr/bin/env Rscript
+
+## source("common.r")
+
 ## install.packages("scrypt")
-library(scrypt)
-help(scrypt)
-help(hashPassword)
-help(verifyPassword)
-password <- hashPassword(readline("Password: "))
-print(password)                         # hashed
+if(!require(scrypt))
+    stop("'scrypt' is needed.")
+## useful functions:
+## help(scrypt)
+## help(hashPassword)
+## help(verifyPassword)
+## works only in interactive mode:
+## password <- hashPassword(readline("Enter password: "))
+cat("Enter password: ")
+password <- hashPassword(readLines(file("stdin"),n=1))
+cat("password hashed:",password,"\n")
 passfile = "password.saved"
 save(password,file=passfile)
+cat("Password saved as:",passfile,"\n")
 rm(password)
 load(file=passfile)
-if (verifyPassword(password,readline("Password: ")) == T) {
-    print("Password check: OK")
+cat("Enter password again: ")
+if (verifyPassword(password,readLines(file("stdin"),n=1)) == T) {
+    cat("Password check: OK\n")
 } else {
-    print("Password check: NOK")
+    cat("Password check: NOK\n")
 }
 
-rawpass <- charToRaw("test password")
-help(charToRaw)
-typeof(rawpass)
-class(rawpass)
-save(rawpass,file="rawpass")
-rawToChar(rawpass)
+test.passw <- "test password"
+cat(paste0("Test password: '",test.passw,"'\n"))
+rawpass <- charToRaw(test.passw)
+cat("Raw password:",rawpass,"\n")
+## help(charToRaw)
+## typeof(rawpass)
+## class(rawpass)
+rpass.fn = "rawpass"
+save(rawpass,file=rpass.fn)
+cat("Raw password saved as:",rpass.fn,"\n")
+rm(rawpass)
+cat("(raw password variable removed.)\n")
+load(file=rpass.fn)
+cat("read back from file:",rawpass,"\n")
+cat("rawToChar:",rawToChar(rawpass),"\n")
