@@ -87,11 +87,13 @@ proc.json.df <- function(json.df,id) {
     return(out.list)
 }
 
-fn3 <- "tmdb_5000_movies.csv"
-movies <- proc.tmdb.fn(fn3)
-print(str(movies))
+user.input <- proc.user.input()
+
+fn1 <- "tmdb_5000_movies.csv"
+movies <- proc.tmdb.fn(fn1,user.input$num.lines)
+## print(str(movies))
 movies.list <- proc.df(movies)
-print(str(movies.list))
+## print(str(movies.list))
 
 other.dfs <- proc.json.df(movies.list$json,movies.list$movies$id)
 
@@ -99,9 +101,21 @@ warns <- warnings()
 if(length(warns) > 0)
     print(warns)
 
-print(str(other.dfs))
+## print(str(other.dfs))
 
-cat("to be continued...\n")
+movies.list$json <- NULL
+movies.list <- append(movies.list,other.dfs)
+
+print(str(movies.list))
+
+fn2 <- file.path(DATA.DIR,"tmdb_5000_movies.RData")
+
+if (!file.exists(fn2) || user.input$store.res) {
+    save(movies.list,file=fn2)
+    cat("processed data from",fn1,"has been saved into",fn2,"\n")
+} else {
+    cat("File",fn2,"already exists, so extracted data are not saved.\n")
+}
 
 ## basic problem is that this produces a list of dfs:
 ## lapply(fromJSON(movies.list$json$genres[1]),as.data.frame)
