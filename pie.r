@@ -1,6 +1,6 @@
 ## from R help
 
-require(grDevices)
+## require(grDevices)
 pie(rep(1, 24), col = rainbow(24), radius = 0.9)
 
 pie.sales <- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)
