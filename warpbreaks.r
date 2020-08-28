@@ -9,7 +9,7 @@ require(stats); #anova
 print(str(warpbreaks))
 print(summary(warpbreaks))
 
-fn <- file.path(DATA.DIR,"warpbreaks.png")
+fn <- file.path(IMG.DIR,"warpbreaks.png")
 png(file=fn)
 opar <- par(mfrow = c(1, 2), oma = c(0, 0, 1.1, 0))
 plot(breaks ~ tension, data = warpbreaks, col = "lightgray",
