@@ -5,6 +5,21 @@ IMG.DIR <- file.path(".","img")
 if (!dir.exists(IMG.DIR))
     dir.create(IMG.DIR)
 
+get.first.arg.as.fn <- function(wd=getwd()) {
+    args = commandArgs(trailingOnly=T)
+    
+    if (length(args) == 0)
+        stop("Filename should be an argument.")
+
+    cat("All args:\n")
+    print(args)
+
+    if(!file.exists(file.path(wd,args[1])))
+        stop("file not found: '",args[1],"'")
+    
+    return(args[1])
+}
+
 get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
     remote.site <- paste0(loc.site,loc.file)
     local.path <- file.path(data.dir,loc.file)
