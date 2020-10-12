@@ -19,6 +19,10 @@ Stack <- R6Class("Stack",
                          private$stacklist <- append(private$stacklist,elem)
                          private$len <- length(private$stacklist)
                      },
+                     push.as.item = function(elem) {
+                         private$stacklist[[private$len + 1]] = elem
+                         private$len = length(private$stacklist)
+                     },
                      pop = function() {
                          if(private$len > 0) {
                              retval <- private$stacklist[[private$len]]
@@ -43,11 +47,18 @@ Stack <- R6Class("Stack",
                              cat(it," ")
                          cat("\n")
                          invisible(self)
+                     },
+                     names = function() {
+                         return(names(private$stacklist))
+                     },
+                     print.list = function() {
+                         print(str(private$stacklist))
+                         print(private$stacklist)
                      }
                  )
                  )
 
-test.stack <- function() {
+stack.test <- function() {
     if (!require(testit))
         stop("'testit' is needed.")
 
@@ -72,7 +83,15 @@ test.stack <- function() {
     s.null <- s$pop()
     assert(is.null(s.null))
     assert(s$length() == 0)
-    cat("Test has passed.\n")
+    df <- data.frame(a=1:5,b=letters[1:5])
+    s$push(df)
+    assert(s$length() == 2)
+    assert(s$names() == c("a","b"))
+    s$initialize()
+    s$push.as.item(df)
+    assert(s$length() == 1)
+    ##s$print.list()
+    cat("Stack module test has passed.\n")
 }
 
-test.stack()
+##stack.test()
