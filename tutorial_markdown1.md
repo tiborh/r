@@ -1,26 +1,34 @@
 Introduction to R Markdown
 ================
-`etibhar`
-`2020-07-10`
+`demouser`
+`2020-10-13`
 
-Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS
+Word documents. For more details on using R Markdown see
+<http://rmarkdown.rstudio.com>.
 
-Using the **rmarkdown** package (`pandoc` version 1.12.3 or higher is required), the rendering command is
+Using the **rmarkdown** package (`pandoc` version 1.12.3 or higher is
+required), the rendering command is
 
 ``` r
 rmarkdown::render("your rmd file")
 ```
 
-The default is HTML output (because `output` has been specified as such in the heading of the current document). If you would like a markdown (.md) or github (to include graphics, with preview in html) document, add an argument:
+The default is HTML output (because `output` has been specified as such
+in the heading of the current document). If you would like a markdown
+(.md) or github (to include graphics, with preview in html) document,
+add an argument:
 
 ``` r
 rmarkdown::render("your rmd file", md_document())
 rmarkdown::render("your rmd file", github_document())
 ```
 
-------------------------------------------------------------------------
+-----
 
-The same way, PDF output (`pdflatex` is needed, that is `texlive-base`, `texlive-latex-base`, `texlive-latex-extra`, and `texlive-fonts-recommended`):
+The same way, PDF output (`pdflatex` is needed, that is `texlive-base`,
+`texlive-latex-base`, `texlive-latex-extra`, and
+`texlive-fonts-recommended`):
 
 ``` r
 rmarkdown::render("your rmd file", pdf_document())
@@ -40,9 +48,11 @@ rmarkdown::render("your rmd file", beamer_presentation())
 rmarkdown::render("your rmd file", slidy_presentation())
 ```
 
-------------------------------------------------------------------------
+-----
 
-When the document is generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+When the document is generated that includes both content as well as the
+output of any embedded R code chunks within the document. You can embed
+an R code chunk like this:
 
 ``` r
 summary(mtcars)
@@ -70,52 +80,51 @@ summary(mtcars)
     ##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
     ##  Max.   :1.0000   Max.   :5.000   Max.   :8.000
 
-------------------------------------------------------------------------
+-----
 
 You can also embed plots, for example:
 
-![](tutorial_markdown1_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](tutorial_markdown1_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Note that the `echo = FALSE` parameter was added to the code chunk to
+prevent printing of the R code that generated the plot.
 
-Session Information
--------------------
+## Session Information
 
 ``` r
 sessionInfo()
 ```
 
     ## R version 4.0.2 (2020-06-22)
-    ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 16.04.6 LTS
+    ## Platform: aarch64-unknown-linux-gnu (64-bit)
+    ## Running under: Gentoo/Linux
     ## 
     ## Matrix products: default
     ## BLAS:   /usr/local/lib/R/lib/libRblas.so
     ## LAPACK: /usr/local/lib/R/lib/libRlapack.so
     ## 
     ## locale:
-    ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-    ##  [3] LC_TIME=de_DE.UTF-8        LC_COLLATE=en_US.UTF-8    
-    ##  [5] LC_MONETARY=de_DE.UTF-8    LC_MESSAGES=en_US.UTF-8   
-    ##  [7] LC_PAPER=de_DE.UTF-8       LC_NAME=C                 
-    ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-    ## [11] LC_MEASUREMENT=de_DE.UTF-8 LC_IDENTIFICATION=C       
+    ##  [1] LC_CTYPE=en_GB.utf8       LC_NUMERIC=C             
+    ##  [3] LC_TIME=en_GB.utf8        LC_COLLATE=C             
+    ##  [5] LC_MONETARY=en_GB.utf8    LC_MESSAGES=en_GB.utf8   
+    ##  [7] LC_PAPER=en_GB.utf8       LC_NAME=C                
+    ##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
+    ## [11] LC_MEASUREMENT=en_GB.utf8 LC_IDENTIFICATION=C      
     ## 
     ## attached base packages:
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ## [1] knitr_1.29    rmarkdown_2.3
+    ## [1] knitr_1.30    rmarkdown_2.4
     ## 
     ## loaded via a namespace (and not attached):
     ##  [1] compiler_4.0.2  magrittr_1.5    tools_4.0.2     htmltools_0.5.0
-    ##  [5] yaml_2.2.1      stringi_1.4.6   stringr_1.4.0   xfun_0.15      
-    ##  [9] digest_0.6.25   rlang_0.4.6     evaluate_0.14
+    ##  [5] yaml_2.2.1      stringi_1.4.6   stringr_1.4.0   xfun_0.18      
+    ##  [9] digest_0.6.25   rlang_0.4.7     evaluate_0.14
 
-------------------------------------------------------------------------
+-----
 
-Supported Languages
--------------------
+## Supported Languages
 
 ``` r
 library(knitr)
@@ -130,7 +139,7 @@ names(knitr::knit_engines$get())
     ## [31] "asis"      "stan"      "block"     "block2"    "js"        "css"      
     ## [37] "sql"       "go"        "python"    "julia"     "sass"      "scss"
 
-------------------------------------------------------------------------
+-----
 
 ### Some Perl
 
@@ -150,7 +159,7 @@ package TS v0.0.1 {
 1;
 ```
 
-------------------------------------------------------------------------
+-----
 
 ### Some C
 
