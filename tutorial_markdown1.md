@@ -1,7 +1,7 @@
 Introduction to R Markdown
 ================
 `etibhar`
-`2020-07-10`
+`2020-10-20`
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -85,13 +85,13 @@ Session Information
 sessionInfo()
 ```
 
-    ## R version 4.0.2 (2020-06-22)
+    ## R version 4.0.3 (2020-10-10)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 16.04.6 LTS
+    ## Running under: Ubuntu 18.04.5 LTS
     ## 
     ## Matrix products: default
-    ## BLAS:   /usr/local/lib/R/lib/libRblas.so
-    ## LAPACK: /usr/local/lib/R/lib/libRlapack.so
+    ## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+    ## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
     ## 
     ## locale:
     ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -105,12 +105,12 @@ sessionInfo()
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ## [1] knitr_1.29    rmarkdown_2.3
+    ## [1] knitr_1.30    rmarkdown_2.4
     ## 
     ## loaded via a namespace (and not attached):
-    ##  [1] compiler_4.0.2  magrittr_1.5    tools_4.0.2     htmltools_0.5.0
-    ##  [5] yaml_2.2.1      stringi_1.4.6   stringr_1.4.0   xfun_0.15      
-    ##  [9] digest_0.6.25   rlang_0.4.6     evaluate_0.14
+    ##  [1] compiler_4.0.3  magrittr_1.5    tools_4.0.3     htmltools_0.5.0
+    ##  [5] yaml_2.2.1      stringi_1.5.3   stringr_1.4.0   xfun_0.18      
+    ##  [9] digest_0.6.26   rlang_0.4.8     evaluate_0.14
 
 ------------------------------------------------------------------------
 
