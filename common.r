@@ -1,13 +1,18 @@
-DATA.DIR <- file.path(".","data")
-if (!dir.exists(DATA.DIR))
-    dir.create(DATA.DIR)
-IMG.DIR <- file.path(".","img")
-if (!dir.exists(IMG.DIR))
-    dir.create(IMG.DIR)
+dir.maker <- function(dirpath) {
+    if (!dir.exists(dirpath)) {
+        dir.create(dirpath)
+        cat("Directory has been created:",dirpath,"\n")
+    }
+    return(dirpath)
+}
+
+DATA.DIR <- dir.maker(file.path(".","data"))
+IMG.DIR <- dir.maker(file.path(".","img"))
+RESULTS.DIR <- dir.maker(file.path(".","results"))
 
 get.first.arg.as.fn <- function(wd=getwd()) {
     args = commandArgs(trailingOnly=T)
-    
+
     if (length(args) == 0)
         stop("Filename should be an argument.")
 
@@ -16,7 +21,7 @@ get.first.arg.as.fn <- function(wd=getwd()) {
 
     if(!file.exists(file.path(wd,args[1])))
         stop("file not found: '",args[1],"'")
-    
+
     return(args[1])
 }
 
