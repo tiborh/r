@@ -5,3 +5,4 @@ sample and practising r based on various online courses:
 * [R Course on Datacamp](https://www.datacamp.com/home)
 * [Try R on CodeSchool](https://www.codeschool.com/courses/try-r)
 * [R Tutorial on cyclismo.org](http://www.cyclismo.org/tutorial/R/)
+* [R Studio Cheatsheets](https://github.com/rstudio/cheatsheets)
