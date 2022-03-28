@@ -3,11 +3,13 @@
 args0 = commandArgs()
 args1 = commandArgs(trailingOnly=T)
 
-print("all:")
+cat("all:\n")
 print(args0)
+cat("structure:\n")
 print(str(args0))
-print("only user args:")
+cat("only user args:\n")
 print(args1)
+cat("structure:\n")
 print(str(args1))
 
 ## example run:
