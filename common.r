@@ -1,3 +1,13 @@
+get.script.fn <- function() {
+    args <- commandArgs()
+    if (2 < length(args))  {
+        fn <- basename(strsplit(args[grepl("^--file=",args)],"=")[[1]][2])
+        return(fn)
+    } else {
+        return(NULL)
+    }
+}
+
 dir.maker <- function(dirpath) {
     if (!dir.exists(dirpath)) {
         dir.create(dirpath)
@@ -9,6 +19,8 @@ dir.maker <- function(dirpath) {
 DATA.DIR <- dir.maker(file.path(".","data"))
 IMG.DIR <- dir.maker(file.path(".","img"))
 RESULTS.DIR <- dir.maker(file.path(".","results"))
+ARGS <- commandArgs(trailingOnly=T)
+ARGV <- c(get.script.fn(),ARGS)
 
 get.first.arg.as.fn <- function(wd=getwd()) {
     args = commandArgs(trailingOnly=T)
