@@ -51,9 +51,9 @@ get.raw.df <- function(loc.site,loc.file,force.remote=F,data.dir=DATA.DIR) {
 
 stop.if.not.installed <- function(lib.names) {
     for(lib.name in lib.names) {
-        if (!require(lib.name,character.only=T))
+        if (!require(lib.name,character.only=T,quietly=T))
             stop("Not installed: ",lib.name)
-        require(lib.name,character.only=T)
+        require(lib.name,character.only=T,quietly=T)
     }
 }
 
