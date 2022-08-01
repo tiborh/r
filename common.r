@@ -21,6 +21,7 @@ IMG.DIR <- dir.maker(file.path(".","img"))
 RESULTS.DIR <- dir.maker(file.path(".","results"))
 ARGS <- commandArgs(trailingOnly=T)
 ARGV <- c(get.script.fn(),ARGS)
+NARGS <- length(ARGS)
 
 get.first.arg.as.fn <- function(wd=getwd()) {
     args = commandArgs(trailingOnly=T)
