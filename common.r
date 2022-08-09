@@ -8,6 +8,13 @@ get.script.fn <- function() {
     }
 }
 
+check.fn <- function(fn) {
+    if (!file.exists(fn)) {
+        cat("File does not exist:",fn,"\nexiting...\n")
+        quit()
+    }
+}
+
 dir.maker <- function(dirpath) {
     if (!dir.exists(dirpath)) {
         dir.create(dirpath)
@@ -104,3 +111,17 @@ time.generator <- function(num) {
     return(sort(as.POSIXct(sample(unclass(Sys.time()),num),format="%s",origin="1970-01-01 00:00:00")))
 }
 
+check.package <- function(pkg.name,ndebug=T) {
+    if (!require(pkg.name,quietly=ndebug,character.only=T)) {
+        install.packages(pkg.name,repos="https://cloud.r-project.org")
+        if (!require(pkg.name,quietly=ndebug,character.only=T)) {
+            stop("package not found: ",pkg.name)
+        }
+    }
+}
+
+check.packages <- function(pkg.names,ndebug=T) {
+    for (it in pkg.names) {
+        check.package(it,ndebug)
+    }
+}
